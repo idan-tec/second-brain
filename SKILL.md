@@ -64,7 +64,7 @@ So install everything below in one go, in a single turn, without asking anything
 | Template | Installs as |
 |---|---|
 | `CONSTITUTION.md` | `CONSTITUTION.md` |
-| `adapter-root.md` | `CLAUDE.md` **and** `AGENTS.md` **and** `GEMINI.md` (three identical copies) |
+| `adapter-root.md` | `CLAUDE.md` |
 | `ROUTING.md` · `TRUTH.md` | `system/` |
 | `inbox-README.md` · `archive-README.md` | `inbox/README.md` · `archive/README.md` |
 | `START-HERE.md` | `START-HERE.md` |
@@ -250,8 +250,10 @@ Say this out loud at bootstrap: without the review, everything above is a folder
 
 These are not aesthetics. Measured on a real system built the other way round — full tree first, content later — one in five folders was completely empty and nesting reached ten levels deep. A tree built before its content does not fill up; it just hides things.
 
-## One rulebook, many doors
+## One rulebook, one door
 
-Only three files at the root need tool-specific names: `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`. They are **three identical lines pointing at the constitution**, and they never change. Each branch gets the same two-line treatment so that opening a session inside a branch picks up both the root constitution and that branch's rules automatically.
+**Claude Code only.** One file at the root carries a tool-specific name — `CLAUDE.md` — and it is a **five-line pointer at the constitution**. Each branch gets the same two-line treatment, so opening a session inside a branch picks up both the root constitution and that branch's rules automatically: the tool walks from the session's directory upward and loads every adapter it passes.
+
+Other tools read other filenames — `AGENTS.md` for Codex and Cursor, `GEMINI.md` for the Gemini CLI. **Do not install them.** Copies of the same five lines under three names are three files to keep in sync for a tool nobody here uses, and the day they drift is the day two agents are working from different rulebooks. If a second tool ever enters the picture, one `cp` adds it — that is a smaller cost than carrying the duplication from day one against a maybe.
 
 The rules themselves live in exactly one place. The moment a real rule gets written into an adapter, there are two rulebooks — and two rulebooks always drift, always disagree, and the disagreement always surfaces at the worst moment. **An adapter is an address, not a home.**

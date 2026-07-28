@@ -27,8 +27,7 @@ To update later, paste the same line again.
 
 ```
 CONSTITUTION.md          the rules — you never have to read this
-CLAUDE.md AGENTS.md      three-line adapters so any tool finds the rules
-GEMINI.md
+CLAUDE.md                a five-line adapter pointing at them
 START-HERE.md            the one file a human opens
 BOARD.md                 one screen: every branch, its state, what you're neglecting
 decisions/               what was decided and why · what's waiting on you
