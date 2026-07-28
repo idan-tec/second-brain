@@ -122,6 +122,40 @@ A pile is not a failure of the person. It is what happens when material arrives 
 
 **Machine litter is not history.** Editor lock files (`~$…`), `.tmp`, `.DS_Store`, `Thumbs.db`, zero-byte scratch files — these are artifacts an application dropped, not something anyone wrote. "Never delete" protects the owner's work, and treating a stray temp file as work to be preserved forever misreads the rule: it fills the archive with noise until the archive stops being worth opening. Leave them behind during an import and say in one line what was skipped, so the decision is visible rather than silent.
 
+### Last: close the duplicate you just created
+
+**"Copy, never move" leaves a second copy of everything, and an import that stops there is not finished — it is half-done in a way that looks finished.** The original still sits where it was, the owner still sees it, and after two or three imports they are looking at a desktop that feels like more mess than before they started. They will not blame the procedure. They will blame the system.
+
+So every contained take-in ends with the same closing step, in the same session:
+
+1. **Hash every file in the original against the branch.** Not a count, not a spot check — every file.
+2. **Account for the difference.** A file that does not match is either genuinely absent, or was deliberately rewritten during the import (renamed, given a header, merged into a README). Say which, per file. "40 of 41 identical; the 41st is the README, rewritten and expanded, every original section present" is an accounting. "Looks fine" is not.
+3. **State the verdict in one line and hand the decision over.** *"The original is now fully redundant — delete it, or keep it as a backup? Your call."* **Never delete it unasked**, and never let the question quietly go unasked either.
+4. **Log the answer in `DECISIONS.md`,** including "kept on purpose". An original kept deliberately and an original forgotten look identical six months later, and only the log tells them apart.
+
+If anything is genuinely unique to the original — even one file — **rescue it before asking the question**, verify the hash of the rescued copy, and name it. The moment to find that file is before the folder is gone, not after.
+
+**And correct what the import already wrote.** A branch `README` that says *"the original was not touched and still exists"* becomes false the day it is deleted. A durable file that states something about the world carries the date it was true and gets fixed when it stops being true.
+
+## Verifying an import someone says already happened
+
+Different operation, different procedure. **"That folder was already integrated" is not evidence — it is a memory**, and it is the single most expensive sentence in this system, because the action it invites is deletion.
+
+Never act on it. Verify it, in two passes, because one pass is not enough:
+
+1. **By hash** — every file in the source against every file in the claimed destination. This finds what was copied untouched.
+2. **By filename** — every file that failed pass 1, checked against every filename in the destination. **This is the pass people skip, and it is the one that matters**, because a file that arrived and was then edited has a different hash and would otherwise read as "missing" when it is fine.
+
+Report three groups, never a single number:
+
+| Group | Meaning |
+|---|---|
+| **Present, identical** | Copied and untouched. Safe |
+| **Present under the same name, different content** | It arrived, then diverged. **A human decides which version is current** — never resolve this in bulk, in either direction |
+| **Absent entirely** | No file of that name anywhere. It was never integrated |
+
+**Anything in the third group means the claim was false, and the folder stays.** Say what is in it by subject rather than by count — *"the design document for every one of the seventeen features"* lands, "54 files" does not.
+
 ## When unsure
 
 `inbox/`, with a one-line note on what it is and why it was not routed. That is the right answer, not a failure to decide.
