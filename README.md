@@ -1,4 +1,4 @@
-# life-os
+# second-brain
 
 **Turn one empty folder into a second brain — and keep it usable for years.**
 
@@ -13,7 +13,7 @@ Plain markdown files. No app, no database, no subscription, no lock-in.
 Make a folder — **English name, no spaces** — open Claude Code inside it, and paste this:
 
 ```
-Install the skill from https://github.com/idan-tec/life-os into ~/.claude/skills/life-os,
+Install the skill from https://github.com/idan-tec/second-brain into ~/.claude/skills/second-brain,
 then set up a life-management system for me here.
 ```
 
@@ -21,7 +21,7 @@ That's the whole setup. The agent downloads it, installs it, and builds the fold
 
 To update later, paste the same line again.
 
-*(Prefer to do it by hand? Copy this repo's contents to `~/.claude/skills/life-os/`. On Windows that's `C:\Users\<you>\.claude\skills\life-os\`. Create the folder if it isn't there.)*
+*(Prefer to do it by hand? Copy this repo's contents to `~/.claude/skills/second-brain/`. On Windows that's `C:\Users\<you>\.claude\skills\second-brain\`. Create the folder if it isn't there.)*
 
 ## What gets built
 

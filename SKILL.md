@@ -1,9 +1,9 @@
 ---
-name: life-os
+name: second-brain
 description: Turn a single folder into a person's second brain and then govern it, so that any agent opening that folder in any future session knows who the person is, where everything lives, and how to file new material without losing it. Use this whenever someone wants to set up a personal life-management or "second brain" folder from scratch, wants to add a new area of their life to one, throws material at you to be filed ("here, put this somewhere", "where should this go?", "take this folder in"), asks what they are neglecting, or wants their weekly, monthly, or quarterly review. Also use it when someone asks you to organise their notes, projects, goals, or personal documents into a durable structure that survives across sessions and tools - even if they never say "second brain" or "life OS". If a folder you are working in contains a CONSTITUTION.md at its root, this skill governs it.
 ---
 
-# life-os
+# second-brain
 
 **version 0.1.0 · 2026-07-28** — one folder holds a person's whole life. This skill is how any agent works with it.
 
@@ -119,7 +119,7 @@ This matters most in `DECISIONS.md`, because that file is permanent. A claim tha
 
 ### Naming
 
-**The person names the folder.** It is the one thing here that is purely theirs and costs nothing, and someone who named their own folder treats it differently from someone handed a name. Nothing depends on the choice: this skill recognises a life-os folder by finding `CONSTITUTION.md` at its root, never by name, and every path inside is relative. If they have no preference, suggest `second-brain` and move on.
+**The person names the folder.** It is the one thing here that is purely theirs and costs nothing, and someone who named their own folder treats it differently from someone handed a name. Nothing depends on the choice: this skill recognises a second-brain folder by finding `CONSTITUTION.md` at its root, never by name, and every path inside is relative. If they have no preference, suggest `second-brain` and move on.
 
 **One constraint, and it applies to the root folder too: ASCII English, no spaces.** Use hyphens — `second-brain`, `work`, `START-HERE.md`.
 
@@ -129,7 +129,7 @@ Their **content** goes in whatever language they think in. Only the names are co
 
 ### Make it portable
 
-Offer to copy this skill into `<their folder>/.claude/skills/life-os/`. Then the folder carries its own rules: it survives a dead laptop, a new machine, and a different AI vendor in three years. That independence is worth more here than staying in sync with the original, because this folder is supposed to outlive all of them.
+Offer to copy this skill into `<their folder>/.claude/skills/second-brain/`. Then the folder carries its own rules: it survives a dead laptop, a new machine, and a different AI vendor in three years. That independence is worth more here than staying in sync with the original, because this folder is supposed to outlive all of them.
 
 ---
 

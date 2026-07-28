@@ -1,6 +1,6 @@
 # CONSTITUTION — rules for any agent working in this folder
 
-> **life-os v0.1.** This file holds only what does not change between sessions.
+> **second-brain v0.1.** This file holds only what does not change between sessions.
 > Anything that changes — state, goals, what is active — lives in `BOARD.md`, `compass/`, and each branch's `STATE.md`. **Never put state here.**
 > Ceiling: under 100 lines. It is read every session, so every line costs. Everything else loads on demand.
 

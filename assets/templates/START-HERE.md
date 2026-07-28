@@ -1,7 +1,7 @@
 # << the owner's name for this — "my second brain", or whatever they call it >>
 
 > The one file a human opens. Everything else is reached from here.
-> **system:** life-os v0.1 · **storage:** << OneDrive only | OneDrive + git | local only >>
+> **system:** second-brain v0.1 · **storage:** << OneDrive only | OneDrive + git | local only >>
 
 ## What this is
 
