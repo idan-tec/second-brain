@@ -1,6 +1,7 @@
-# CONSTITUTION — rules for any agent working in this folder
+# The rulebook — rules for any agent working in this folder
 
-> **second-brain v0.1.** This file holds only what does not change between sessions.
+> **second-brain v0.2.** This file holds only what does not change between sessions.
+> It carries the name `CLAUDE.md` so Claude Code loads it automatically for every session at or below this folder — the rules do not depend on anyone remembering to read them. The version marker above is also how the second-brain skill recognises this folder: by this line, never by the folder's name.
 > Anything that changes — state, goals, what is active — lives in `BOARD.md`, `compass/`, and each branch's `STATE.md`. **Never put state here.**
 > Ceiling: under 100 lines. It is read every session, so every line costs. Everything else loads on demand.
 
@@ -8,12 +9,14 @@
 
 Before any action, in this order:
 
-1. Read this file in full.
+1. Read this file in full — loaded automatically is not the same as read; do not skim it.
 2. Read `BOARD.md` — every branch, its state, and anything not yet set up.
 3. **If `compass/` exists**, read `compass/NOW.md` and `compass/SEASON.md`. It is absent until the owner accepts the offer to build it, and its absence is normal, not a fault.
 4. Read the `README.md` and `STATE.md` of the branch you are about to touch. **Nothing else in a branch loads automatically.**
 
 Then open your first reply with: **`branch: <name> · read: BOARD, <compass files if present>, <branch>/STATE`**. If that line is missing, the owner knows you did not read.
+
+**Exemption:** a branch that arrived carrying **its own rulebook** (§4) follows **its own opening protocol** when a session works inside it — its rulebook already tells the session what to read, and stacking this section's reads on top is ceremony that buys nothing for that branch's work. This section binds sessions working **at brain level or across branches**. A rule that is silently broken every session teaches sessions that rules are optional; this line replaces that breakage with a written boundary.
 
 ## 1. Laws that never break
 
@@ -34,7 +37,7 @@ Full procedure: `system/ROUTING.md`. **Read it before creating any file.** Short
 
 1. Which branch owns this? *(none fits → `inbox/`)*
 2. Is it **evidence**, a **decision**, **work**, or **proof**? → `kind:` on line one
-3. How far is it trusted? → `trust:` on line one — `current` · `needs-review` · `done` · `superseded`
+3. How far is it trusted? → `current` · `needs-review` · `completed` · `superseded` (see §4 for the two ways to say it)
 4. How sensitive is it? → inherit the branch, and ask if this item is more sensitive than its home.
 
 ## 3. Who wins in a conflict
@@ -45,7 +48,7 @@ Full order: `system/TRUTH.md`. Highest first:
 2. Verified reality — checked directly, never a report about it
 3. `compass/` — WHO-I-AM > HORIZON > SEASON > NOW
 4. A branch's `current/` material
-5. `done/` — evidence of the past, not an instruction for now
+5. `completed/` — evidence of the past, not an instruction for now
 6. `needs-review/` — never authoritative until reviewed
 7. `superseded/` and `archive/` — historical context only
 
@@ -55,15 +58,18 @@ Full order: `system/TRUTH.md`. Highest first:
 
 **A branch is an area of a life. It is never a category of files.** The test is what the thing *is*: if the answer is a kind of file — backups, exports, invoices, screenshots, scripts — that is **material**, and material lives inside an existing branch or in `archive/`. It never earns a branch of its own. Only a life area does, and only the owner names one.
 
-A branch is `README.md` + `STATE.md` + `CLAUDE.md` (adapter) + `notes/`, and **everything filed goes into `notes/`, flat.** Kind and trust are the **first line of the file**, not folders around it:
+A branch is `README.md` + `STATE.md` + `CLAUDE.md`, plus its material. **`CLAUDE.md` is normally a three-line adapter pointing here — but a branch that arrived carrying its own rulebook keeps it in that slot.** This root file loads for every session anywhere below it, so the branch is still addressed; forcing an imported rulebook out of the name its own project loads would break that project to satisfy this one. **The rulebooks are reconciled, never ranked.** A contradiction between them is a defect here, fixed here, and recorded in `decisions/OPEN.md` — never settled by an agent mid-session.
 
-`kind: evidence | decision | work | proof · trust: current | needs-review | done | superseded · <date if it states a fact>`
+**The four trust words are fixed everywhere — `current` · `needs-review` · `completed` · `superseded` — but there are two valid ways to say them, and a branch uses one, never both:**
 
-**Folders are storage. `INDEX.md` is how anything is found.** People look for things by what they are *about*, never by what stage of a process produced them — so a folder tree built on stages hides material behind a classification the owner never made and cannot recall. The index, grouped by topic in their own words, plus plain search across markdown, is the retrieval surface. Keep it current and the flat pile costs nothing.
+- **First-line label** (the default for a branch this system creates): everything lands in `notes/`, flat, and line one reads `kind: evidence | decision | work | proof · trust: <word> · <date if it states a fact>`.
+- **Trust folders** (`current/` · `needs-review/` · `completed/`): for a branch that **arrived already organised that way.** Keep it. Re-cutting a working project to satisfy a house style destroys the muscle memory of whoever built it, and a copy reshaped away from its source stops being comparable to it.
 
-Sub-folders appear only when the volume genuinely hurts to scan, and then they are named **by topic in the owner's words** — never by lifecycle stage. Propose; never grow structure silently.
+**Folders are storage. `INDEX.md` is how anything is found.** People look for things by what they are *about*, never by which stage produced them. The index, grouped by topic in the owner's words, plus plain search across markdown, is the retrieval surface — and it is what makes either form above safe.
 
-Ceilings: **3 levels below a branch** · **~7 items per view, excluding tool adapters** · a folder is justified from the 3rd sibling · `INDEX.md` once a branch passes ~5 files.
+**Never invent a stage tree for material that arrived without one.** New sub-folders are named by topic in the owner's words. Propose; never grow structure silently.
+
+Ceilings — **on structure this system creates, never on a branch's own imported tree**: **3 levels below a branch** · **~7 items per view, excluding tool files** · a folder is justified from the 3rd sibling · `INDEX.md` once a branch passes ~5 files.
 
 **Goals never live in a branch.** They live in `compass/SEASON.md` only. A branch may link to a goal; it never copies one. Two copies of a goal is two goals that will disagree.
 

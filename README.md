@@ -2,7 +2,7 @@
 
 **Turn one empty folder into a second brain — and keep it usable for years.**
 
-A folder that holds a whole life. Every area is a *branch*: work, money, health, family, a course you're building, whatever you actually have. No preset list, no limit. Any agent that opens the folder — any tool, any session, no prior context — reads the same rules and knows who you are, what matters, and where everything lives.
+A folder that holds a whole life. Every area is a *branch*: work, money, health, family, a course you're building, whatever you actually have. No preset list, no limit. Built for **Claude Code**: the rules live in the one file it loads automatically, so every session — any machine, no prior context — knows who you are, what matters, and where everything lives. The files themselves are plain markdown any tool can read.
 
 Plain markdown files. No app, no database, no subscription, no lock-in.
 
@@ -17,7 +17,7 @@ Install the skill from https://github.com/idan-tec/second-brain into ~/.claude/s
 then set up a life-management system for me here.
 ```
 
-That's the whole setup. The agent downloads it, installs it, and builds the folder in one turn — **without asking you a single question.** Then you start throwing things at it.
+That's the whole setup. The agent downloads it, installs it, and builds the folder in one turn — **asking at most one question: which language you think in.** Then you start throwing things at it.
 
 To update later, paste the same line again.
 
@@ -26,8 +26,7 @@ To update later, paste the same line again.
 ## What gets built
 
 ```
-CONSTITUTION.md          the rules — you never have to read this
-CLAUDE.md                a five-line adapter pointing at them
+CLAUDE.md                the rulebook — loads by itself in every session; you never have to read it
 START-HERE.md            the one file a human opens
 BOARD.md                 one screen: every branch, its state, what you're neglecting
 decisions/               what was decided and why · what's waiting on you

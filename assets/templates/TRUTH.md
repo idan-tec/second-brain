@@ -26,7 +26,7 @@ A task in NOW that contradicts WHO-I-AM is not a scheduling problem. It is a sig
 
 Authoritative inside its own branch, never outside it.
 
-### 5. `trust: done`
+### 5. `trust: completed`
 
 Evidence of what happened — useful for reconstruction and audit. **Not an instruction for today.**
 
@@ -44,7 +44,7 @@ Historical context, and only when explicitly asked for.
 |---|---|
 | What is true right now? | Verified reality (2) |
 | What should happen? | The owner's latest decision (1) |
-| What happened before? | `done/` and `DECISIONS.md` (5) |
+| What happened before? | `completed/` and `DECISIONS.md` (5) |
 | Reality and intent disagree? | **Neither.** Record the gap in `decisions/OPEN.md`. |
 
 ## Three things an agent must not do

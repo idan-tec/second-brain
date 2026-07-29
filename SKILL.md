@@ -1,11 +1,11 @@
 ---
 name: second-brain
-description: Turn a single folder into a person's second brain and then govern it, so that any agent opening that folder in any future session knows who the person is, where everything lives, and how to file new material without losing it. Use this whenever someone wants to set up a personal life-management or "second brain" folder from scratch, wants to add a new area of their life to one, throws material at you to be filed ("here, put this somewhere", "where should this go?", "take this folder in"), asks what they are neglecting, or wants their weekly, monthly, or quarterly review. Also use it when someone asks you to organise their notes, projects, goals, or personal documents into a durable structure that survives across sessions and tools - even if they never say "second brain" or "life OS". If a folder you are working in contains a CONSTITUTION.md at its root, this skill governs it.
+description: Turn a single folder into a person's second brain and then govern it, so that any agent opening that folder in any future session knows who the person is, where everything lives, and how to file new material without losing it. Use this whenever someone wants to set up a personal life-management or "second brain" folder from scratch, wants to add a new area of their life to one, throws material at you to be filed ("here, put this somewhere", "where should this go?", "take this folder in"), asks what they are neglecting, or wants their weekly, monthly, or quarterly review. Also use it when someone asks you to organise their notes, projects, goals, or personal documents into a durable structure that survives across sessions and tools - even if they never say "second brain" or "life OS". If a folder you are working in has a root CLAUDE.md (or CONSTITUTION.md, in older installs) whose opening lines carry a "second-brain v" marker, this skill governs it.
 ---
 
 # second-brain
 
-**version 0.1.0 · 2026-07-28** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.0 · 2026-07-29** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -31,14 +31,14 @@ The same split runs through everything: **their content in their language** — 
 
 Templates split in two, and the line between them matters:
 
-- **The frame — `CONSTITUTION.md`, the three adapters, `system/ROUTING.md`, `system/TRUTH.md`, the `inbox/` and `archive/` READMEs — installs verbatim, in English.** Nobody but an agent reads these, agents read English perfectly well, and keeping them byte-identical across every install is what makes the system teachable, upgradeable, and checkable — you can verify an install is intact by comparing it against the templates.
+- **The frame — the root `CLAUDE.md` rulebook, the branch adapters, `system/ROUTING.md`, `system/TRUTH.md`, the `inbox/` and `archive/` READMEs — installs verbatim, in English.** Nobody but an agent reads these, agents read English perfectly well, and keeping them byte-identical across every install is what makes the system teachable, upgradeable, and checkable — you can verify an install is intact by comparing it against the templates.
 - **Everything the person actually reads — `START-HERE`, `BOARD`, the `compass/` set, `decisions/`, and every branch's `README` and `STATE` — is written in their language**, translating the template's headings as you fill it. There the template is a shape to follow, not text to transcribe.
 
 An owner who cannot read their own board does not have a second brain; they have a filing cabinet in a language they do not think in.
 
 ## If the folder already exists
 
-Read `CONSTITUTION.md` at its root first, always. This skill tells you *how* to act. The constitution tells you *what the rules are*, and the owner may have amended them. **The constitution wins.**
+Read the root `CLAUDE.md` in full first, always — Claude Code loads it automatically, but loaded is not read. This skill tells you *how* to act. The rulebook tells you *what the rules are*, and the owner may have amended them. **The rulebook wins.** (An older install may carry the same rulebook as `CONSTITUTION.md` with a five-line `CLAUDE.md` adapter pointing at it; treat the pair as the rulebook, and offer — once — to migrate it to the single-file form.)
 
 ## Pick a mode
 
@@ -49,7 +49,7 @@ Read `CONSTITUTION.md` at its root first, always. This skill tells you *how* to 
 | handing you material, or a whole folder, to file | **INTAKE** |
 | asking what moved, what is stuck, what is neglected | **REVIEW** |
 
-Never run BOOTSTRAP on a folder that already has a `CONSTITUTION.md`. That is an existing system; orient into it instead.
+Never run BOOTSTRAP on a folder that already carries the `second-brain v` marker in a root `CLAUDE.md` or `CONSTITUTION.md`. That is an existing system; orient into it instead.
 
 ---
 
@@ -63,8 +63,7 @@ So install everything below in one go, in a single turn, without asking anything
 
 | Template | Installs as |
 |---|---|
-| `CONSTITUTION.md` | `CONSTITUTION.md` |
-| `adapter-root.md` | `CLAUDE.md` |
+| `root-CLAUDE.md` | `CLAUDE.md` — the rulebook itself, at the root |
 | `ROUTING.md` · `TRUTH.md` | `system/` |
 | `inbox-README.md` · `archive-README.md` | `inbox/README.md` · `archive/README.md` |
 | `START-HERE.md` | `START-HERE.md` |
@@ -119,7 +118,7 @@ This matters most in `DECISIONS.md`, because that file is permanent. A claim tha
 
 ### Naming
 
-**The person names the folder.** It is the one thing here that is purely theirs and costs nothing, and someone who named their own folder treats it differently from someone handed a name. Nothing depends on the choice: this skill recognises a second-brain folder by finding `CONSTITUTION.md` at its root, never by name, and every path inside is relative. If they have no preference, suggest `second-brain` and move on.
+**The person names the folder.** It is the one thing here that is purely theirs and costs nothing, and someone who named their own folder treats it differently from someone handed a name. Nothing depends on the choice: this skill recognises a second-brain folder by the `second-brain v` marker in the opening lines of its root `CLAUDE.md`, never by the folder's name, and every path inside is relative. If they have no preference, suggest `second-brain` and move on.
 
 **One constraint, and it applies to the root folder too: ASCII English, no spaces.** Use hyphens — `second-brain`, `work`, `START-HERE.md`.
 
@@ -159,15 +158,17 @@ This matters more than it looks. An agent that re-offers a declined thing every 
 
 ## ORIENT — every session
 
-Read in this order: `CONSTITUTION.md` → `BOARD.md` → `compass/NOW.md` and `compass/SEASON.md` → the `README.md` and `STATE.md` of the branch in play.
+Read in this order: the root `CLAUDE.md` (loaded automatically — read it, do not skim it) → `BOARD.md` → `compass/NOW.md` and `compass/SEASON.md` → the `README.md` and `STATE.md` of the branch in play.
 
-That is the whole mandatory set, and it is deliberately small — roughly 200 lines. **Keeping it small is a feature, not a convenience.** A reading list of twenty files gets skimmed, and a skimmed constitution is no constitution.
+That is the whole mandatory set, and it is deliberately small — roughly 200 lines. **Keeping it small is a feature, not a convenience.** A reading list of twenty files gets skimmed, and a skimmed rulebook is no rulebook.
 
 Nothing else in a branch loads automatically. Use the branch's `INDEX.md` to find things rather than walking folders.
 
 Open your first reply with one line so the owner can tell at a glance that you actually read:
 
 `branch: <name> · read: BOARD, NOW, SEASON, <branch>/STATE`
+
+**Exemption:** a branch that arrived carrying **its own rulebook** follows **its own opening protocol** when a session works inside it — its rulebook already names what to read, and stacking this list on top is ceremony that buys nothing for that branch's work. ORIENT as written binds sessions working **at brain level or across branches**. (The measured failure that produced this rule: on a real install, every session inside an imported-rulebook branch silently skipped ORIENT, because the branch's own rulebook prescribed a different reading order — and a rule broken silently every session teaches sessions that rules are optional.)
 
 ---
 
@@ -244,7 +245,7 @@ Say this out loud at bootstrap: without the review, everything above is a folder
 
 ## Structure ceilings
 
-**Max 3 levels below a branch** · **max ~7 items in any one view, excluding the three tool adapters** (they have to sit at the root to be found, so they do not count against readability) · **a folder is justified from the 3rd sibling file** · **zero empty folders**.
+**Max 3 levels below a branch** · **max ~7 items in any one view, excluding tool files like `CLAUDE.md`** (they have to sit where their tool finds them, so they do not count against readability) · **a folder is justified from the 3rd sibling file** · **zero empty folders**. The depth ceiling binds structure this system creates — **an imported branch's own tree is exempt**, however deep it runs.
 
 **Dot-directories are tools, not content.** `.obsidian/`, `.claude/`, `.git/` and their kind belong to whatever the owner uses to read, edit, sync, or version this folder. They do not count against any ceiling, they are never tidied away, and they are never treated as clutter to clean up — deleting one throws away someone's settings or history. The folder is plain text on disk precisely so that these can come and go without it mattering; leave them alone.
 
@@ -252,8 +253,6 @@ These are not aesthetics. Measured on a real system built the other way round �
 
 ## One rulebook, one door
 
-**Claude Code only.** One file at the root carries a tool-specific name — `CLAUDE.md` — and it is a **five-line pointer at the constitution**. Each branch gets the same two-line treatment, so opening a session inside a branch picks up both the root constitution and that branch's rules automatically: the tool walks from the session's directory upward and loads every adapter it passes.
+**Built for Claude Code, and the rulebook *is* the root `CLAUDE.md`.** There is no separate constitution file: the rules live directly in the one file Claude Code loads automatically for every session at or below the folder. That choice is deliberate — a rulebook behind a pointer depends on every session obeying the pointer, and measured on a real install, sessions skip mandated reads. A rulebook that is *in context by force* cannot be skipped. Each branch gets a three-line adapter (`adapter-branch.md`), so a session opened inside a branch picks up the root rulebook and the branch's own rules automatically: the tool walks upward from the session's directory and loads every `CLAUDE.md` it passes.
 
-Other tools read other filenames — `AGENTS.md` for Codex and Cursor, `GEMINI.md` for the Gemini CLI. **Do not install them.** Copies of the same five lines under three names are three files to keep in sync for a tool nobody here uses, and the day they drift is the day two agents are working from different rulebooks. If a second tool ever enters the picture, one `cp` adds it — that is a smaller cost than carrying the duplication from day one against a maybe.
-
-The rules themselves live in exactly one place. The moment a real rule gets written into an adapter, there are two rulebooks — and two rulebooks always drift, always disagree, and the disagreement always surfaces at the worst moment. **An adapter is an address, not a home.**
+Other tools read other filenames — `AGENTS.md` for Codex and Cursor, `GEMINI.md` for the Gemini CLI. **Do not install them.** If a second tool ever enters the picture, add a three-line pointer file under that tool's name, aimed at `CLAUDE.md` — never a copy of the rules, because two rulebooks always drift, always disagree, and the disagreement always surfaces at the worst moment. The rules themselves live in exactly one place. **An adapter is an address, not a home.**

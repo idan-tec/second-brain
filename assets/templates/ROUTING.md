@@ -24,9 +24,9 @@ Never skip one, never reorder them. If a question cannot be answered, **stop and
 | **work** | something in progress right now |
 | **proof** | something that happened, with a result |
 
-**This is a label on the file's first line, not a folder.** Everything lands in `notes/`, flat.
+**In a branch this system created, this is a label on the file's first line, not a folder** — everything lands in `notes/`, flat. **In a branch that arrived with its own `current/` · `needs-review/` · `completed/` tree, the folder is the label.** Same four words, one form per branch, never both.
 
-Folders sorted by lifecycle stage fail the only test that matters: a person looking for something searches by what it is *about*, never by which stage of a process produced it. Filing by stage means retrieval requires reconstructing a classification the owner never made — which is how a well-organised folder becomes a place things disappear into.
+Why the default is the label: inventing a stage tree means retrieval requires reconstructing a classification the owner never made — which is how a well-organised folder becomes a place things disappear into. Why the exception is real: a tree somebody already built and navigates daily is not an invention, and flattening it costs more than it saves. Either way `INDEX.md` is what makes things findable, and neither form works without it.
 
 **The trap worth naming:** a decision that arrives inside a working document is still a decision. Extract it. It also needs its line in `decisions/DECISIONS.md`, or in six months it is invisible and someone re-decides it differently.
 
@@ -36,7 +36,7 @@ Folders sorted by lifecycle stage fail the only test that matters: a person look
 |---|---|
 | `current` | Approved, in force |
 | `needs-review` | Might be right. **Never quoted as fact.** |
-| `done` | Finished. Evidence of the past, not an instruction for now |
+| `completed` | Finished. Evidence of the past, not an instruction for now |
 | `superseded` | Replaced. Historical context only |
 
 Also a first-line label, for the same reason. **Default is `needs-review`.** Promotion to `current` belongs to the owner alone — an agent never promotes trust by itself, because a draft quoted as settled is indistinguishable from a fact until it causes damage.
@@ -71,7 +71,7 @@ Every one of these, every time:
 ## Hard limits
 
 - **Never create an empty folder.** It appears with its first file.
-- **Three levels below a branch.** Deeper needs a written reason in the branch README.
+- **Three levels below a branch — for structure this system creates.** Deeper needs a written reason in the branch README. **An imported branch's own tree is exempt**, however deep it runs; it is governed by whatever built it.
 - **About seven items per view**, excluding tool adapters. Past that, people stop scanning and start missing things.
 - **A folder is justified from the third sibling.** One file does not get a house.
 - **No absolute paths. Anywhere.**

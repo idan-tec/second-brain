@@ -28,7 +28,7 @@ Any agent that opens this folder — any tool, any session, no prior context —
 | `system/` | `ROUTING.md` (where things go) · `TRUTH.md` (who wins in a conflict) |
 | `inbox/` | Thrown in, not yet placed. **The correct default, not a failure** |
 | `archive/` | Reached only by explicit decision. **Nothing is ever deleted** |
-| `CONSTITUTION.md` | Rules for agents. The owner never has to read it |
+| `CLAUDE.md` | The rulebook for agents — loads by itself. The owner never has to read it |
 
 ## The three things that keep this alive
 
