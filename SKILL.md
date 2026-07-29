@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.0 · 2026-07-29** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.1 · 2026-07-29** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -44,7 +44,7 @@ Read the root `CLAUDE.md` in full first, always — Claude Code loads it automat
 
 | The person is… | Mode |
 |---|---|
-| starting from an empty (or unstructured) folder | **BOOTSTRAP** |
+| asking for a second brain to be set up | **BOOTSTRAP** |
 | opening a session to work | **ORIENT** |
 | handing you material, or a whole folder, to file | **INTAKE** |
 | asking what moved, what is stuck, what is neglected | **REVIEW** |
@@ -54,6 +54,16 @@ Never run BOOTSTRAP on a folder that already carries the `second-brain v` marker
 ---
 
 ## BOOTSTRAP — an empty folder becomes a life
+
+### First: look at where you are standing
+
+**BOOTSTRAP builds into the current folder only when it is empty** — or holds nothing but tool droppings (`.git`, `.obsidian`, `.claude`, `desktop.ini`, `.DS_Store` and their kind).
+
+**If the folder already has real content, do not build into it.** A second brain installed on top of someone's existing files starts life owning material nobody routed: their documents sit next to `BOARD.md` with no branch, no index row, no trust label — invisible to the board, to the sweep, and to every review above. Measured on a real install: two content folders that pre-dated setup were still unrouted weeks later, because nothing ever looked at them. And the reverse risk is worse — a session "tidying" files it was never given.
+
+Instead: **create a fresh sub-folder — `second-brain/`, unless the owner names something else — install there, and say plainly what you did and why.** The existing files are not touched, not moved, not read. If the owner later wants any of them inside, that is INTAKE — deliberate, one folder at a time, after the system exists. If the owner explicitly insists on installing into the non-empty folder itself, that is their call: record it in `DECISIONS.md`, and every pre-existing item gets a line on `BOARD.md`'s "not yet set up" list so nothing is silently invisible.
+
+### Then build
 
 **Ask nothing. Build it, hand it over, let them start using it.**
 

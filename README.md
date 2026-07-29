@@ -19,6 +19,8 @@ then set up a life-management system for me here.
 
 That's the whole setup. The agent downloads it, installs it, and builds the folder in one turn — **asking at most one question: which language you think in.** Then you start throwing things at it.
 
+Ran it inside a folder that already has files? **It won't touch them.** It builds into a fresh `second-brain/` sub-folder instead, and your existing files stay exactly where they are — you can feed them in later, deliberately, one at a time.
+
 To update later, paste the same line again.
 
 *(Prefer to do it by hand? Copy this repo's contents to `~/.claude/skills/second-brain/`. On Windows that's `C:\Users\<you>\.claude\skills\second-brain\`. Create the folder if it isn't there.)*
