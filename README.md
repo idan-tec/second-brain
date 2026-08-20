@@ -33,9 +33,11 @@ START-HERE.md            the one file a human opens
 BOARD.md                 one screen: every branch, its state, what you're neglecting
 decisions/               what was decided and why · what's waiting on you
 system/                  where things go · who wins when two things disagree
-branches/                one per area of your life
+branches/                one per area of your life — *not created at setup; born when you name the first*
 inbox/  archive/         unsorted · retired, never deleted
 ```
+
+**No branches at setup either — not even `work` and `personal`.** Two default branches is the setup questionnaire written to disk instead of asked out loud, and on a real install both of them failed inside two weeks: one was never touched, the other described everything its owner did and therefore described nothing. So the folder starts with no areas in it. **The first one is born the day you bring something that belongs to one, and you name it** — in your word, not from anybody's list. Until then things land in `inbox/`, which is the right answer and not a failure.
 
 No `compass/` at setup, and no empty folders anywhere. Goals get offered later, once there's enough here to have an opinion about.
 

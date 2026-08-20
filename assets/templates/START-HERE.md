@@ -5,7 +5,7 @@
 
 ## What this is
 
-One folder that runs a whole life. Each area is a **branch**. There is no limit on how many, and no preset list — the owner decides what their branches are.
+One folder that runs a whole life. Each area is a **branch**. There is no limit on how many and no preset list — the owner decides what their branches are, and **nothing was decided for them at setup: this folder starts with no areas in it at all.** The first one appears when they bring something that belongs to one, and they name it.
 
 Any agent that opens this folder — any tool, any session, no prior context — reads the same rules and learns who this person is, what matters to them, and where everything lives.
 
@@ -23,7 +23,7 @@ Any agent that opens this folder — any tool, any session, no prior context —
 |---|---|
 | `BOARD.md` | The board. Every branch on one screen |
 | `compass/` | Vision and goals — **only here, never inside a branch** |
-| `branches/` | One per area of life |
+| `branches/` | One per area of life. **Nothing here at setup** — the folder itself appears with the first area I name |
 | `decisions/` | `DECISIONS.md` — what was decided and why (append-only, and it stays one file) · `OPEN.md` — what is stuck on me at the level of the whole folder, and the map of every open list in it |
 | `system/` | `ROUTING.md` (where things go) · `TRUTH.md` (who wins in a conflict) << · `OWNERSHIP.md` — whose business each branch is and where every repo, database and automation lives. This one appears only once some branch here is not mine >> |
 | `inbox/` | Thrown in, not yet placed. **The correct default, not a failure** |

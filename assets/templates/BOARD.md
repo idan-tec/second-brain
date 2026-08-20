@@ -3,10 +3,14 @@
 > One screen. Every branch. **Updated: << YYYY-MM-DD >>**
 > State: 🟢 fine · 🟡 needs attention · 🔴 neglected · ⚪ dormant by choice
 
+**No areas here yet, and nothing was created for you to fill in.** No `work`, no `personal`, not even the folder that would hold them. **The first one is born from the first thing that plainly belongs to an area of your life, and you name it.** Until then anything you throw in lands in [`inbox/`](inbox/README.md) — which is the right place for it, not a failure.
+
+<< This paragraph comes out in the same edit that adds the first row. A folder with an area in it must never still be
+   telling its owner it has none. The table below replaces it: >>
+
 | Branch | State | Last touched | Holds a goal | Sensitivity |
 |---|---|---|---|---|
-| [work](branches/work/STATE.md) | 🟢 | << YYYY-MM-DD >> | — | open |
-| [personal](branches/personal/STATE.md) | 🟢 | << YYYY-MM-DD >> | — | private |
+| << [name](branches/<< name >>/STATE.md) >> | << 🟢 >> | << YYYY-MM-DD >> | << — >> | << open · private · sealed >> |
 
 ## Not yet set up
 

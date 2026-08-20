@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.3 · 2026-08-20** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.4 · 2026-08-20** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -77,41 +77,48 @@ So install everything below in one go, in a single turn, without asking anything
 | `ROUTING.md` · `TRUTH.md` | `system/` |
 | `inbox-README.md` · `archive-README.md` | `inbox/README.md` · `archive/README.md` |
 | `START-HERE.md` | `START-HERE.md` |
-| `BOARD.md` | `BOARD.md` — the two rows below, plus the "not yet set up" section |
+| `BOARD.md` | `BOARD.md` — with no rows in it, plus the "not yet set up" section |
 | `DECISIONS.md` · `OPEN.md` | `decisions/` |
-| `branch-README-preset.md` · `branch-STATE.md` · `adapter-branch.md` | `branches/work/` and `branches/personal/` |
+
+**That is the whole install. There is no row for `branches/`, because it is not created** — see below.
 
 Everything comes from `assets/templates/`: **copy and fill; do not compose from memory.** If every install improvises its own wording there is no shared system to teach, support, or upgrade — only a family of lookalikes that drift apart. An install done right is byte-identical to the templates in its frame files, which is what makes it checkable later.
 
 **No `compass/` at setup.** See the section below — it is offered later, and creating it now would leave four aspirational files full of placeholders. **An empty file is worse than a missing one, because it looks handled.** The same reasoning that forbids empty folders forbids these.
 
-**And nothing else early either.** Six things in this system are deliberately absent from a fresh install: `notes/`, a branch `INDEX.md`, a branch's own `OPEN.md`, a branch's own `archive/`, `system/OWNERSHIP.md`, and `compass/`. **Each is born with its first real item**, and each has a written trigger — the table in *When the folder outgrows its first shape*. Installing one early saves nothing later.
+**And nothing else early either.** Seven things in this system are deliberately absent from a fresh install: `branches/` itself, `notes/`, a branch `INDEX.md`, a branch's own `OPEN.md`, a branch's own `archive/`, `system/OWNERSHIP.md`, and `compass/`. **Each is born with its first real item**, and each has a written trigger — the table in *When the folder outgrows its first shape*. Installing one early saves nothing later.
 
-### The two branches it starts with
+### It starts with no branches at all
 
-`work` and `personal`. That is all, and the count is deliberate.
+**Nothing is created here for a person to fill in later** — not `work`, not `personal`, not the folder that would hold them.
 
-A branch that already exists is not the same thing as a list offered as a question. A question anchors — say "work, health, money" and the person starts picking from your menu instead of describing their life, and it cannot be undone. **A default that is visibly a default anchors nothing**: it can be renamed, split, or deleted in one move, and its own README says so in the first line.
+Earlier versions of this skill installed those two, on the argument that a default which is visibly a default anchors nothing the way a setup question does. **Measured on a real install, both failed inside two weeks, in opposite directions.** `personal` was never used once — three skeleton files, retired at the owner's own request in the words *"they're empty and they bother me."* And `work` filled up with real material and still had to be renamed, because it described everything the person did and therefore described nothing: the board showed a branch that read as empty while it held the only copy of several working documents. **Two defaults, two failure modes, one folder.**
 
-But a *specific* name still anchors even unasked, which is why there are only two. `family` is not universal — some people do not have one, and for others it is complicated. `health` presumes something. `work` is close to universal and is where the first material will come from anyway; `personal` is deliberately vague and is explicitly labelled a temporary holding pen.
+The reason is already written into every other rule here. **A branch that exists before its material is a shape waiting to be filled, and a tree built before its content does not fill up — it hides things.** A default branch is the setup question again, written to disk instead of asked out loud, and it is worse in one respect: a question can be ignored, while a folder sitting there reads as an instruction.
 
-**`personal` is meant to be outgrown, and that is the mechanism that replaces the interview.** As it fills, watch for clusters — but watch for the *right* thing. A cluster of files is not automatically an area of a life; if it were, everyone would end up with a branch called "invoices". **What you are looking for is a part of their life that has started to take up room.**
+So `branches/` is born with the first branch, and the first branch is born from material. **That makes it the same rule as everything else in this system** — `notes/`, `INDEX.md`, a branch's own `OPEN.md`, `system/OWNERSHIP.md`, `compass/`. `branches/` was the last exception to it. There are now none.
 
-The list below is not a taxonomy and never becomes folders. It exists so you can *recognise* one when it shows up, instead of dropping everything into `personal` because nothing matched:
+**Where the first thing goes before any branch exists:** `inbox/`, which is installed on day one and is already the honest answer. Nothing is lost there, and nothing pretends to be filed.
+
+**How the first branch is actually born.** The moment material plainly belongs to an area of a life — not a kind of file, an *area* — say what you noticed and let them name it: *"everything you've put in so far is about the same thing. Do you want it as its own area? What do you call it?"* **Their word, not yours.** That is the one question worth spending here, and it is the same question that creates every branch after it. Until it gets asked, the folder is honestly empty, which is a true thing to be.
+
+**Watch for the right thing.** A cluster of files is not an area of a life; if it were, everyone would end up with a branch called "invoices". The list below is not a taxonomy, is never read out to the owner as a menu, and never becomes folders. It exists so you can *recognise* one when it turns up, instead of leaving everything in `inbox/` because nothing matched:
 
 > health · money · family · a specific relationship · a child · caring for a parent · learning something · home and property · a side project or business · a craft or practice · faith · a legal or bureaucratic process with an end date
 
-When one appears, **say what you noticed and let them name it** — *"the last few things you've put in are all about your health. Do you want that separate? What do you call it?"* Their word, not the one from this list. And when they say no, record it and do not raise it again.
+When they say no, record it and do not raise it again.
+
+**And say what the board says on day one: nothing.** Zero rows, with a line stating that plainly and saying what makes the first one appear. An empty board is not a broken board.
 
 ### Asking costs something
 
 **A question spends the owner's attention, and attention is the scarce thing here — not disk space and not your tokens.** You know how to file. So file: route into existing branches, create folders when they are justified, keep the index and the board current, and do it without narrating each step as a decision they have to make.
 
-Ask only when the answer would change what you do **and** the material cannot settle it. Naming a new area of their life is the clearest case — that is theirs. "Which of these two branches does this belong in" usually is not; pick the one they would look in, and say so in a line they can correct.
+Ask only when the answer would change what you do **and** the material cannot settle it. Naming a new area of their life is the clearest case — that is theirs. "Which of these existing branches does this belong in" usually is not; pick the one they would look in, and say so in a line they can correct.
 
 ### Then get out of the way
 
-Say in a few lines what now exists and that they can start putting things in. **Do not present a plan, a next step, or a checklist.** The whole promise is that this needs no setup.
+Say in a few lines what now exists and that they can start putting things in. **Say plainly that there are no areas in it yet and that this is correct** — the first one appears when they bring something that belongs to one. **Do not present a plan, a next step, or a checklist.** The whole promise is that this needs no setup.
 
 Detect storage **once**: is there a `.git`? Record `storage:` in `START-HERE.md` and never ask again. git is optional and always will be — requiring it would exclude everyone who is not a developer, which is most of the people who need this.
 
@@ -174,6 +181,7 @@ A fresh install fits one person, a couple of areas, and one list of open questio
 
 | What appears | The day it appears |
 |---|---|
+| `branches/` | the first branch — and the first branch is named by the owner, from material |
 | `notes/` in a branch | the first file filed there |
 | `INDEX.md` in a branch | roughly the fifth file |
 | `archive/` inside a branch | the first time something *in that branch* is retired — a whole branch being retired goes to the root `archive/` instead |
@@ -252,7 +260,7 @@ Skipping the index or the state update is the real failure mode. The file exists
 
 **Unsure which branch?** `inbox/`, with a one-line note. Never invent a branch to hold one file, and never guess in order to look tidy. A wrong file in a right-looking place reads as *decided*; an honest unsorted one reads as *pending*.
 
-**When a new branch is genuinely born** — the owner names one, or a cluster in `personal` gets split out — it gets the same flat trio as the originals, from `branch-README.md`, `branch-STATE.md`, and `adapter-branch.md`, **plus its row on `BOARD.md` in the same action.** Use `branch-README.md` here, not the preset version: this one was chosen rather than handed over, and it should not carry a paragraph telling the owner it is a default they can throw away.
+**When a branch is genuinely born** — the owner names one, or a cluster in `inbox/` turns out to be an area of their life — it gets the flat trio from `branch-README.md`, `branch-STATE.md` and `adapter-branch.md`, **plus its row on `BOARD.md` in the same action.** **If it is the first, it creates `branches/` too**, and the board's "no branches yet" paragraph comes out in the same edit — a folder that now has an area in it should never still be telling its owner that it has none.
 
 **Taking in a whole existing folder?** Two shapes, and the test is simple: **does it have a live, heavy `.git`, or is anything actively writing to it?** If yes, make it a *pointer* branch — three small files describing where it lives and how to work with it, nothing copied, nothing moved, zero risk. If no, make it a *contained* branch — copy it in (**copy, never move**; verify the copy works before touching the original), then reconcile the roles it duplicates. An imported folder usually brings its own root files, its own inbox and archive, and sometimes its own rulebook. Those collisions are the work; the copying is trivial.
 
@@ -272,7 +280,7 @@ The reason is retrieval, and it is the thing these systems get wrong most often.
 
 Offer it when it is due. Never run one unasked.
 
-- **Weekly** — `NOW` against `SEASON`. What moved, what did not. **Anything stuck twice running gets flagged** — twice is not laziness, it is a signal that the goal or its definition is wrong. Empty the `inbox/`.
+- **Weekly** — `NOW` against `SEASON`. What moved, what did not. **Anything stuck twice running gets flagged** — twice is not laziness, it is a signal that the goal or its definition is wrong. Empty the `inbox/` — **and early on this is where branches get born**, because a week's worth of material shows what someone's life is actually made of far better than they could have said on day one.
 - **Monthly** — scan `BOARD.md` for neglect and report it **as data, flatly**: "family: 58 days." Not "you have been neglecting your family." The person already knows; what they lack is the number.
 - **Quarterly** — close `SEASON`, write outcomes into `DECISIONS.md`, confirm every line marked `assumed`, open the next cycle. **An unmet goal does not roll over automatically** — it gets re-chosen or dropped, deliberately.
 
