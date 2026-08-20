@@ -21,3 +21,11 @@ The date is **when it was retired**, not when it was written. Someone searching 
 ## The second safety net
 
 If this folder syncs to a cloud drive, that service's version history and recycle bin are the real undo for an accidental deletion. **Worth confirming once that they are actually switched on** rather than assuming it.
+
+---
+
+## Links inside archived folders are expected to be dead
+
+**Do not repair them.** An archived document is a photograph of a moment. Its links pointed at the world as it was, and rewriting them to resolve today would quietly falsify the record — the file would then claim to describe a state that never existed.
+
+**A link check on this folder skips `archive/` and reports its count separately.** That is what "historical context only" means in practice, and it is the difference between a broken link that is a defect and one that is evidence.

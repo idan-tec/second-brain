@@ -39,11 +39,13 @@ inbox/  archive/         unsorted · retired, never deleted
 
 No `compass/` at setup, and no empty folders anywhere. Goals get offered later, once there's enough here to have an opinion about.
 
+**It grows into more than that, on triggers rather than on setup.** A branch gets an index around its fifth file, its own list of open questions with the first one that's genuinely branch-only, its own `archive/` the first time something there is retired. And the day a branch stops being yours — someone else's product you're paid to build, a relative's business running on your accounts — the folder grows a `system/OWNERSHIP.md`: whose business each branch is, who owns the IP, where every repo, database and automation actually lives, every field dated. **None of it is built in advance.** A file answering a question nobody asked yet reads as an answer.
+
 ## The ideas it's built on
 
 **Three axes, not one.** Most systems sort by topic and stop. This one also tracks **how far something is trusted** (approved · unreviewed · finished · replaced) and **how sensitive it is** — because six months on, a draft and a locked decision look identical, and that's how false things quietly become true.
 
-**Goals live only at the root, capped at five across your whole life.** Give every area its own goals and you can never choose *between* areas — and choosing between areas is the entire problem.
+**Goals live only at the root, capped at five across your whole life** — and so does *this week*. Give every area its own goals and you can never choose *between* areas; give every area its own `NOW` and you have four things that are all urgent and nothing that chooses. Choosing between areas is the entire problem.
 
 **Folders are storage; the index is how things are found.** People look for things by what they're *about*, never by which stage of a process produced them. So `notes/` stays flat and `INDEX.md` does the work.
 
@@ -63,7 +65,7 @@ Ask it what you're neglecting. Ask for the weekly review. **Without the review t
 
 It won't send, publish, pay, or delete on your behalf. Instructions aren't a permission layer: assume that if an agent *can* do something irreversible, one day it will, on a misread. Keep the keys outside the folder.
 
-It holds no secrets. No passwords, no API keys, no `.env` files. Names, ownership and where a thing is managed — fine. The values belong in a password manager.
+It holds no secrets. No passwords, no API keys, no `.env` files — and least of all somebody else's. Names, ownership, where a thing is managed and who can reach it — fine. The values belong in a password manager, outside the folder.
 
 ## Works with
 

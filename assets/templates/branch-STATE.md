@@ -12,7 +12,8 @@
 
 ## Open
 
-<< Items in decisions/OPEN.md that touch this branch, by number. Delete if none. >>
+<< This branch's own [`OPEN.md`](OPEN.md), by id — plus any item in `decisions/OPEN.md` at brain level
+   (ownership, money, cross-branch) that this branch is waiting on. Delete the section if neither exists. >>
 
 ---
 

@@ -1,7 +1,7 @@
 # << the owner's name for this — "my second brain", or whatever they call it >>
 
 > The one file a human opens. Everything else is reached from here.
-> **system:** second-brain v0.1 · **storage:** << OneDrive only | OneDrive + git | local only >>
+> **system:** second-brain << version — copy the version line from the skill's header >> · **storage:** << OneDrive only | OneDrive + git | local only >>
 
 ## What this is
 
@@ -24,8 +24,8 @@ Any agent that opens this folder — any tool, any session, no prior context —
 | `BOARD.md` | The board. Every branch on one screen |
 | `compass/` | Vision and goals — **only here, never inside a branch** |
 | `branches/` | One per area of life |
-| `decisions/` | `DECISIONS.md` — what was decided and why (append-only) · `OPEN.md` — what is stuck on me |
-| `system/` | `ROUTING.md` (where things go) · `TRUTH.md` (who wins in a conflict) |
+| `decisions/` | `DECISIONS.md` — what was decided and why (append-only, and it stays one file) · `OPEN.md` — what is stuck on me at the level of the whole folder, and the map of every open list in it |
+| `system/` | `ROUTING.md` (where things go) · `TRUTH.md` (who wins in a conflict) << · `OWNERSHIP.md` — whose business each branch is and where every repo, database and automation lives. This one appears only once some branch here is not mine >> |
 | `inbox/` | Thrown in, not yet placed. **The correct default, not a failure** |
 | `archive/` | Reached only by explicit decision. **Nothing is ever deleted** |
 | `CLAUDE.md` | The rulebook for agents — loads by itself. The owner never has to read it |

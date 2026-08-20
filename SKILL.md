@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.1 · 2026-07-29** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.3 · 2026-08-20** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -19,7 +19,7 @@ So this system carries three axes at once, and the second and third are the ones
 - **Trust** — approved · unreviewed · finished · replaced
 - **Sensitivity** — open · private · sealed
 
-And one rule holds it together: **goals live only at the root, state lives in every branch.** If each area of a life carries its own goals, the person can never choose *between* areas — and choosing between areas is the entire problem.
+And one rule holds it together: **goals live only at the root, state lives in every branch.** If each area of a life carries its own goals, the person can never choose *between* areas — and choosing between areas is the entire problem. **`NOW` follows the same rule for the same reason.** What is *open*, by contrast, does eventually split — see *When the folder outgrows its first shape* for what splits, what does not, and what triggers each.
 
 ## Speak their language
 
@@ -84,6 +84,8 @@ So install everything below in one go, in a single turn, without asking anything
 Everything comes from `assets/templates/`: **copy and fill; do not compose from memory.** If every install improvises its own wording there is no shared system to teach, support, or upgrade — only a family of lookalikes that drift apart. An install done right is byte-identical to the templates in its frame files, which is what makes it checkable later.
 
 **No `compass/` at setup.** See the section below — it is offered later, and creating it now would leave four aspirational files full of placeholders. **An empty file is worse than a missing one, because it looks handled.** The same reasoning that forbids empty folders forbids these.
+
+**And nothing else early either.** Six things in this system are deliberately absent from a fresh install: `notes/`, a branch `INDEX.md`, a branch's own `OPEN.md`, a branch's own `archive/`, `system/OWNERSHIP.md`, and `compass/`. **Each is born with its first real item**, and each has a written trigger — the table in *When the folder outgrows its first shape*. Installing one early saves nothing later.
 
 ### The two branches it starts with
 
@@ -166,6 +168,57 @@ This matters more than it looks. An agent that re-offers a declined thing every 
 
 ---
 
+## WHEN THE FOLDER OUTGROWS ITS FIRST SHAPE
+
+A fresh install fits one person, a couple of areas, and one list of open questions. Most folders stay there. **This section is everything that appears when that stops being true — each with the trigger that creates it, so nothing is ever built on a guess that it will be wanted one day.**
+
+| What appears | The day it appears |
+|---|---|
+| `notes/` in a branch | the first file filed there |
+| `INDEX.md` in a branch | roughly the fifth file |
+| `archive/` inside a branch | the first time something *in that branch* is retired — a whole branch being retired goes to the root `archive/` instead |
+| a branch's own `OPEN.md` | the first open question belonging to that branch alone |
+| `system/OWNERSHIP.md`, and a `Whose business` column on the board | the first branch that is not the owner's |
+| `compass/` | the owner says yes to the offer |
+
+**None of these gets installed early "so it is ready."** A file that answers a question nobody has asked yet reads as an answer, and a reader cannot tell a placeholder from a decision.
+
+### A second party arrives
+
+It arrives quietly. Someone else's product the owner is paid to build. A relative's business running entirely on the owner's accounts. A client's material coming in for one job. **Nothing about the folder announces the change, and every rule in it was written assuming everything inside is the owner's.**
+
+Two failures follow, and both have been measured on a real install. A document whose opening line declared it the one authoritative register of every identifier in the system listed someone else's business as a product of the wrong ecosystem, and was quoted as current for a month while being a month stale — **a file that declares itself the source of truth is not one.** And that same wrong claim had propagated *outside* the folder, into a user-level skill that loads in **every** project, where this folder's rulebook has no reach whatsoever. **Fix the outside copy in the same pass**, or the folder is right and the thing that actually loads is wrong.
+
+When it happens:
+
+- **Install `OWNERSHIP.md` into `system/`** from the template — one table for commercial ownership, one per activity for infrastructure, every field carrying the date it was true.
+- **Add the `Whose business` column to `BOARD.md`**, filled for every row including the owner's own.
+- **The branch `README.md` states whose it is on its second line**, beside sensitivity.
+- **Write the ownership into `DECISIONS.md`** with the date and whose sentence it was. It is a fact about the world settled by the owner, not a property of a folder.
+
+**The rule that costs the most to learn late:** a branch that is not the owner's is not the owner's to hand around, and **access in one activity never implies access in another** — even when the same person appears in both. When someone does appear in two activities in different roles, write the overlap down as a fact. Priority, rate and access all stop being neutral at that point, and none of it becomes harmless by being obvious.
+
+**Keys still never enter the folder** — least of all another party's. `OWNERSHIP.md` records where a thing is managed and who can reach it. It never holds what they reach it with.
+
+**Where there is nothing in writing between the parties, this map and the branch's open list are the entire memory of what was agreed.** They are not a substitute for an agreement and should never be described as one. What they can do is carry every change in rate, scope or inclusion on the day it is said, with the date — so the record is at least contemporaneous.
+
+### One open list stops being enough
+
+A fresh install has one list, and that is right while there is a single working life in here. **It stops being right the moment there is more than one business or more than one owner**, because "what is open" and "what is open on this one thing" become different questions, and one list can only answer the first.
+
+**Split into two tiers. Never four:**
+
+- **`decisions/OPEN.md` at the root** — ownership, money, the system itself, anything crossing branches. **It opens with the map: one row per open list in the folder, including any list an imported branch brought with it.** That map is the only surface answering *"what is open across everything"*, and a list missing from it is open and invisible.
+- **A branch's own `OPEN.md`** — from `branch-OPEN.md`. What belongs to that branch alone, ids namespaced (`FIN-O1`) so no number is ever ambiguous between two lists.
+
+**`DECISIONS.md` does not split with it**, and they look far more like a matching pair than they are. An open list is a working surface, read by whoever is on that one branch. The log is the history of the whole folder and gets read end to end. History split four ways stops being readable as history.
+
+**`NOW` does not split either, for the opposite reason:** it is the one file whose entire job is choosing between branches, and four of them would be four things that are all urgent and nothing that chooses. *"The next step here"* is `STATE.md`, and that is a different question.
+
+**Leave existing ids where they are.** Renumbering breaks every reference ever written to them, and those references sit in files nobody is going to re-read. Migration is a deliberate, logged decision — and *"these were left unmigrated on purpose"* is a legitimate line in the map.
+
+---
+
 ## ORIENT — every session
 
 Read in this order: the root `CLAUDE.md` (loaded automatically — read it, do not skim it) → `BOARD.md` → `compass/NOW.md` and `compass/SEASON.md` → the `README.md` and `STATE.md` of the branch in play.
@@ -192,8 +245,8 @@ Then the part that gets forgotten. **Filing is not finished when the file exists
 - Row added to the branch `INDEX.md`, under a topic heading in the owner's words (create it from `branch-INDEX.md` once the branch passes ~5 files — it is the retrieval surface, so it is not optional once there is anything to retrieve)
 - Branch `STATE.md` last-touched date updated
 - `BOARD.md` row updated
-- Changed a decision? → a line in `decisions/DECISIONS.md`
-- Raised something only the owner can settle? → an item in `decisions/OPEN.md`, **with a written recommendation and a default**
+- Changed a decision? → a line in `decisions/DECISIONS.md` — **one log, always the root one, whatever branch it came from**
+- Raised something only the owner can settle? → an item in an open list, **with a written recommendation and a default**. Which list, once there is more than one: *When the folder outgrows its first shape*, below
 
 Skipping the index or the state update is the real failure mode. The file exists and is invisible, which is worse than not having written it — the person now believes it is handled.
 
@@ -210,6 +263,8 @@ Skipping the index or the state update is the real failure mode. The file exists
 **Keep the index current, and let the folder stay flat.** `notes/` holds everything; `kind:` and `trust:` are the file's first line. Sub-folders only when the pile genuinely hurts to scan — and then **named by topic, in the owner's words**, never by lifecycle stage. Say so before creating one; never grow structure silently.
 
 The reason is retrieval, and it is the thing these systems get wrong most often. **People look for things by what they are about.** A tree sorted by stage-of-process asks them to reconstruct a classification they never made, so the material is technically filed and practically gone. `INDEX.md` grouped by topic, plus plain search over markdown, is what actually finds things — folders are only storage.
+
+**There are two valid ways to say trust, and a branch uses one of them, never both.** A branch this system creates uses the first-line label: flat `notes/`, `kind:` and `trust:` on line one. **A branch that arrived already sorted into `current/` · `needs-review/` · `completed/` keeps its folders** — the four words are fixed everywhere and mean the same thing in either form. Re-cutting a working project to match the house style destroys the muscle memory of whoever built it, and a copy reshaped away from its source stops being comparable to it. **What is never allowed is one branch using both**, because then a file's trust has two answers and nothing says which is stale. `INDEX.md` is what makes either form findable, which is why it is the part that is not optional.
 
 ---
 
@@ -229,8 +284,11 @@ The three reviews above are the owner's. This one is yours, and it exists becaus
 - branches whose `STATE.md` date is older than their newest file
 - near-duplicates that should be one file plus a supersession line
 - notes naming a decision that never reached `DECISIONS.md`
-- links pointing at files that moved or were renamed
+- links pointing at files that moved or were renamed — **skipping `archive/` and reporting its count separately.** An archived document is a photograph of a moment; its dead links are evidence, and repairing them falsifies the record
+- an open list with no row in the map at the top of `decisions/OPEN.md` — open and invisible, which is the open-question version of a file no index mentions
 - anything factual carrying no date
+- **the same number or rule stated in two places** — a target, a cadence, a count, a cap. One of them is already wrong or shortly will be. Do not reconcile them into a matching pair; pick the home, and turn the other into a link
+- **and check inside single files, not only across them.** A document updated in one section and not another contradicts itself, which is harder to see than two files disagreeing and reads as authoritative either way. Every measured instance of this so far has been a number that was replaced hours after it was first written, in a document nobody re-read from the top
 
 Fix the mechanical parts and report them; leave anything that changes meaning to the owner. **Offer it — never schedule it.** A sweep on a timer bills for nights when nothing happened and trains the owner to stop reading its output.
 
@@ -240,7 +298,7 @@ Say this out loud at bootstrap: without the review, everything above is a folder
 
 ## The laws
 
-- **The owner defines the terms.** Never decide what "enough", "healthy", or "successful" means for someone. Build the surface where they write it down, then hold them to what they wrote.
+- **The owner defines the terms.** Never decide what "enough", "healthy", or "successful" means for someone. Build the surface where they write it down, then hold them to what they wrote. **Their capacity is one of those terms.** An ordinary working week is an assumption, not a fact — measured here, an agent computed an alarm from one, called a commitment "most of the week" when it was about a third, and had to be corrected by the owner. An alarm raised against an invented baseline costs more than no alarm, because it spends the one thing this system runs on: the owner still believing what it tells them. If it is not written down, ask.
 - **Every decision goes in a file**, with a date and a reason. Conversation memory does not survive the session, and most installs have no version control — `decisions/DECISIONS.md` is the only history there is.
 - **Never delete, never overwrite.** Move to `archive/` with a date. `DECISIONS.md` is append-only; a reversed decision gets a new line that supersedes the old one, never an edit.
 - **Never promote trust.** `needs-review` → `current` is the owner's call, always.
@@ -252,6 +310,8 @@ Say this out loud at bootstrap: without the review, everything above is a folder
 - **A branch is an area of a life, never a category of files.** Material lives inside a branch or in `archive/`; it never earns one of its own.
 - **Assume that if it can, it will.** Instructions are not a permission layer. Anything irreversible or outward-facing — sending, publishing, paying, deleting — is described in the folder and done by the owner. Keep the keys outside; wording never held anything back.
 - **Date every fact.** An undated number reads as current forever, and that is how a memory starts misleading the person who trusts it.
+- **No secrets in the folder. Ever.** No passwords, API keys, tokens, account numbers or `.env` files — not in a note, not carried in with an imported folder, not "just for now". A folder that syncs to a cloud drive and is read by agents is the wrong shape for anything whose entire value is that nobody else holds it. **Names, ownership, where a thing is managed, who has access, when it was last checked — all fine.** The values belong in a password manager. **Check for this at intake rather than trusting it**, because a real project brings its own, and an import is exactly how they get in.
+- **A prohibition with no replacement gets filled by a guess.** *"Never invent this"* says what not to do and leaves the gap standing, and an agent missing a detail does not stop — it fills with the plausible thing and keeps building on it. The plausible one is the dangerous one, precisely because it does not look like a mistake. **Every `never` written into this folder needs its `instead` next to it**, and the instead is usually *ask the owner, and park the item until they answer*.
 
 ## Structure ceilings
 
@@ -266,3 +326,19 @@ These are not aesthetics. Measured on a real system built the other way round �
 **Built for Claude Code, and the rulebook *is* the root `CLAUDE.md`.** There is no separate constitution file: the rules live directly in the one file Claude Code loads automatically for every session at or below the folder. That choice is deliberate — a rulebook behind a pointer depends on every session obeying the pointer, and measured on a real install, sessions skip mandated reads. A rulebook that is *in context by force* cannot be skipped. Each branch gets a three-line adapter (`adapter-branch.md`), so a session opened inside a branch picks up the root rulebook and the branch's own rules automatically: the tool walks upward from the session's directory and loads every `CLAUDE.md` it passes.
 
 Other tools read other filenames — `AGENTS.md` for Codex and Cursor, `GEMINI.md` for the Gemini CLI. **Do not install them.** If a second tool ever enters the picture, add a three-line pointer file under that tool's name, aimed at `CLAUDE.md` — never a copy of the rules, because two rulebooks always drift, always disagree, and the disagreement always surfaces at the worst moment. The rules themselves live in exactly one place. **An adapter is an address, not a home.**
+
+### The same rule binds skills, and that is where it actually breaks
+
+A folder like this accumulates skills of its own — a procedure the owner runs often enough to be worth packaging, living in `<folder>/.claude/skills/`. **A skill is a trigger and a procedure. It is never a second home for a rule.**
+
+The failure is specific and it has been measured. On a real install, a folder-local skill grew to 202 lines by restating the documents it pointed at — the same laws, the same format rules, the same targets — while *also*, in its opening paragraph, mandating that those documents be read in full every time. Two weeks later it carried **two contradictory targets for the same number, both dated the same day**: one matched the document, the other was a leftover of a decision replaced hours after it was written. A session reading only the skill would have reported against the wrong number with no way to know. The redundancy that was supposed to be a safety net was the thing that lied.
+
+**The owner's own test settles what goes where, and it is better than any rule about it:**
+
+> *If there is any chance you would ever want to read it or fix it yourself, it is a document. If only an agent would ever execute it, it belongs in the skill.*
+
+So a folder-local skill legitimately holds **when it wakes up** (its `description`), **what to read and in what order**, **the procedure nobody but the agent runs**, and **the shape of its output**. It holds no laws, no targets, no numbers, no restated rules. Those live in the documents — once, where the owner can see them and fix them without opening a config file.
+
+**One exception, and keep it to one:** a rule whose violation harms someone *outside* the folder may be flagged in the skill by name and severity, pointing at the document. A flag is an address; a summary is a second copy.
+
+**Correct one thing when this comes up, because the owner will usually raise it as a token problem and it is not.** Only a skill's frontmatter `description` enters a session; the body loads when the skill triggers. A 200-line skill costs almost nothing per session. **The reason to cut it is drift, not context** — and saying so matters, because someone who believes they are saving tokens will fix the file once and let it grow straight back.

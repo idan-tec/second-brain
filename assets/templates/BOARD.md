@@ -33,3 +33,4 @@ Things this system can do that have not been switched on. **Each line disappears
 - 🔴 means *"no information"*, not *"something bad happened."* Say it that way.
 - This board does not replace a branch's `STATE.md`. It points at it.
 - A new branch gets its row **in the same action that creates it**. A branch that is not on the board does not exist.
+- **A `Whose business` column appears here the day one of these branches stops being the owner's** — someone else's product, a relative's business, a client's material. Until that day it would be one word repeated down the page. When it appears, `system/OWNERSHIP.md` appears with it, and the column links there.

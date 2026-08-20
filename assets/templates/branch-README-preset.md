@@ -1,6 +1,10 @@
 # << work | personal >>
 
-**sensitivity: << open for work · private for personal >>**
+**sensitivity: << open for work · private for personal >>** · **whose business: the owner's**
+
+<< That second field looks redundant on day one and it is. It is here because the day it stops being true arrives without
+   warning — someone else's product, a relative's business, a client's material — and on that day an agent needs to read
+   whose it is from the branch itself rather than infer it. See `system/OWNERSHIP.md`, which is born on that same day. >>
 
 **This branch is a default, not a choice.** Nobody asked what to call it — it was here when the folder was created, so that there would be somewhere to put the first thing instead of a blank screen.
 
@@ -8,9 +12,9 @@
 
 ## Shape
 
-Flat. Three files: `README.md`, `STATE.md`, `CLAUDE.md`.
+Flat. Three files always: `README.md`, `STATE.md`, `CLAUDE.md`.
 
-Everything that gets filed here lands in `notes/` — **which appears together with its first file, not before.** An empty folder is never created anywhere in this system, so until something is filed there is nothing to see.
+Everything that gets filed here lands in `notes/` — **which appears together with its first file, not before.** An empty folder is never created anywhere in this system, so until something is filed there is nothing to see. The same goes for the rest of the shape: **`INDEX.md`** once this passes about five files, **`OPEN.md`** with the first question only I can settle, and **`archive/`** the first time something here is retired.
 
 **`notes/` stays flat.** What a file is and how far it is trusted go on its first line — `kind:` and `trust:` — not in folders around it. Sub-folders appear only when the pile is genuinely hard to scan, named **by topic, in my words**, never by process stage. Finding things happens through the index and plain search, not by clicking down a tree.
 
