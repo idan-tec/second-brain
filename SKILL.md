@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.4 · 2026-08-20** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.5 · 2026-08-20** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -284,6 +284,18 @@ Offer it when it is due. Never run one unasked.
 - **Monthly** — scan `BOARD.md` for neglect and report it **as data, flatly**: "family: 58 days." Not "you have been neglecting your family." The person already knows; what they lack is the number.
 - **Quarterly** — close `SEASON`, write outcomes into `DECISIONS.md`, confirm every line marked `assumed`, open the next cycle. **An unmet goal does not roll over automatically** — it gets re-chosen or dropped, deliberately.
 
+### The board is status. It is never history.
+
+**The single most expensive file in a folder like this is `BOARD.md`, and it gets expensive quietly.** Every session is made to read it before doing anything, so whatever accumulates there is paid for again on every open, forever. Nothing else in the system has that property.
+
+**What accumulates there is always the same thing: dated paragraphs.** Something happens, it gets written up on the board because that is the file everyone looks at, and the write-up is a second telling of what is already in `decisions/DECISIONS.md`. **Measured on a real install: the board reached 26,888 bytes, and 22,538 of them — 84% — were exactly that.** Four dated paragraphs, every one of them matching decision-log entries on the same dates.
+
+**And by then the board had started contradicting itself.** Two paragraphs at the bottom still described a branch that had been renamed nine days earlier and another that had been retired the same day — while the table directly above them showed the current five. A file updated in one section and not another reads as authoritative in both.
+
+So: **a paragraph on the board that opens with a date belongs in the log.** The board carries the table, what is not yet set up, and one short paragraph of what is true *right now*. **Keep it under about 6KB**, and when it grows past that, the thing that grew is almost always narrative — move it, never summarise it into both places.
+
+**Cutting one is a four-step operation and the first step is not optional:** copy the whole file verbatim into `archive/<date>-board-narrative/` **before touching it**, so nothing can be lost; check each dated paragraph against the log; **write a log entry for anything that lived only on the board**; then rewrite. And say honestly in the log which check you actually ran — matching by date is not the same as comparing sentence by sentence, and claiming the stronger one is how a log stops being trusted.
+
 ### The sweep
 
 The three reviews above are the owner's. This one is yours, and it exists because filing has a step that reliably gets skipped: the index row, the state date, the board. Offer a sweep when a lot has arrived at once, or alongside the weekly review:
@@ -291,12 +303,20 @@ The three reviews above are the owner's. This one is yours, and it exists becaus
 - files no `INDEX.md` mentions — they exist and are invisible
 - branches whose `STATE.md` date is older than their newest file
 - near-duplicates that should be one file plus a supersession line
+- **the same file living in two branches** — and check the sizes and dates, not just the names. Two copies that were byte-identical when they were made are the normal case; **the question is what they are now.** Measured here: 22 days after a copy, one side was 14,346 bytes and the other 5,276 — a third of the length and three weeks behind, carrying none of the rules added in between. **A duplicate that has drifted is not clutter, it is a trap**, because the stale side reads as authoritative and carries no sign that it is dead
+- **an item closed without its references being repaired.** Closing one is not finished when it leaves the list: the counts, cross-references and branch notes that named it are all now wrong, and they are wrong in files nobody re-reads. Measured here: closing one item left a count of "thirteen of the original fourteen" standing in another item, and a branch's own list still describing it as live
 - notes naming a decision that never reached `DECISIONS.md`
 - links pointing at files that moved or were renamed — **skipping `archive/` and reporting its count separately.** An archived document is a photograph of a moment; its dead links are evidence, and repairing them falsifies the record
 - an open list with no row in the map at the top of `decisions/OPEN.md` — open and invisible, which is the open-question version of a file no index mentions
 - anything factual carrying no date
 - **the same number or rule stated in two places** — a target, a cadence, a count, a cap. One of them is already wrong or shortly will be. Do not reconcile them into a matching pair; pick the home, and turn the other into a link
 - **and check inside single files, not only across them.** A document updated in one section and not another contradicts itself, which is harder to see than two files disagreeing and reads as authoritative either way. Every measured instance of this so far has been a number that was replaced hours after it was first written, in a document nobody re-read from the top
+
+**Two things about how a sweep is allowed to act.**
+
+**When the fix is "remove the duplicate", the removal is the easy half and the stub is the half that matters.** *Never delete* turns it into a move to `archive/` — but archiving alone leaves a hole where a document used to be, and the next session that goes looking for it finds nothing and **writes a new one**, which is how a duplicate comes back. So: move it to `archive/<date>-<what>/`, and **leave a short file in its place** saying where the live version is, what happened, and *do not restore from the archive copy — it is a photograph of a moment, not a version*.
+
+**And when a document describes files that are no longer there, fixing the description is not deciding the question.** Correct the statement of fact, record that the change itself was never logged and can no longer be reconstructed, and **leave the open item open.** Those are two different acts and only the first is yours. The trap is that fixing the description makes the item *look* handled — so say in the same breath which question is still unanswered.
 
 Fix the mechanical parts and report them; leave anything that changes meaning to the owner. **Offer it — never schedule it.** A sweep on a timer bills for nights when nothing happened and trains the owner to stop reading its output.
 
@@ -318,7 +338,7 @@ Say this out loud at bootstrap: without the review, everything above is a folder
 - **A branch is an area of a life, never a category of files.** Material lives inside a branch or in `archive/`; it never earns one of its own.
 - **Assume that if it can, it will.** Instructions are not a permission layer. Anything irreversible or outward-facing — sending, publishing, paying, deleting — is described in the folder and done by the owner. Keep the keys outside; wording never held anything back.
 - **Date every fact.** An undated number reads as current forever, and that is how a memory starts misleading the person who trusts it.
-- **No secrets in the folder. Ever.** No passwords, API keys, tokens, account numbers or `.env` files — not in a note, not carried in with an imported folder, not "just for now". A folder that syncs to a cloud drive and is read by agents is the wrong shape for anything whose entire value is that nobody else holds it. **Names, ownership, where a thing is managed, who has access, when it was last checked — all fine.** The values belong in a password manager. **Check for this at intake rather than trusting it**, because a real project brings its own, and an import is exactly how they get in.
+- **No secrets in the folder. Ever.** No passwords, API keys, tokens, account numbers or `.env` files — not in a note, not carried in with an imported folder, not "just for now". A folder that syncs to a cloud drive and is read by agents is the wrong shape for anything whose entire value is that nobody else holds it. **Names, ownership, where a thing is managed, who has access, when it was last checked — all fine.** The values belong in a password manager. **Check for this at intake rather than trusting it**, because a real project brings its own, and an import is exactly how they get in. **And once one has been in here, taking the file out does not close it.** A folder that syncs to a cloud keeps the file in that cloud's version history — the same version history the archive rules call the real undo — and there is usually another copy wherever it came from. **Rotation is the only action that closes an exposed credential.** Removal only makes it invisible, which is worse, because it looks solved.
 - **A prohibition with no replacement gets filled by a guess.** *"Never invent this"* says what not to do and leaves the gap standing, and an agent missing a detail does not stop — it fills with the plausible thing and keeps building on it. The plausible one is the dangerous one, precisely because it does not look like a mistake. **Every `never` written into this folder needs its `instead` next to it**, and the instead is usually *ask the owner, and park the item until they answer*.
 
 ## Structure ceilings

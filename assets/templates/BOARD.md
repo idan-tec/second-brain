@@ -2,6 +2,8 @@
 
 > One screen. Every branch. **Updated: << YYYY-MM-DD >>**
 > State: 🟢 fine · 🟡 needs attention · 🔴 neglected · ⚪ dormant by choice
+>
+> **This file is status. It is never history.** What happened and why lives in [`decisions/DECISIONS.md`](decisions/DECISIONS.md) · what is open lives in [`decisions/OPEN.md`](decisions/OPEN.md) · the detail of a branch lives in its `STATE.md`. **A paragraph here that opens with a date belongs in the log, not on the board.**
 
 **No areas here yet, and nothing was created for you to fill in.** No `work`, no `personal`, not even the folder that would hold them. **The first one is born from the first thing that plainly belongs to an area of your life, and you name it.** Until then anything you throw in lands in [`inbox/`](inbox/README.md) — which is the right place for it, not a failure.
 
@@ -37,4 +39,5 @@ Things this system can do that have not been switched on. **Each line disappears
 - 🔴 means *"no information"*, not *"something bad happened."* Say it that way.
 - This board does not replace a branch's `STATE.md`. It points at it.
 - A new branch gets its row **in the same action that creates it**. A branch that is not on the board does not exist.
+- **Ceiling: this file stays under about 6KB, and every session pays for whatever is in it.** The rulebook makes each session read this file before doing anything, so bloat here is charged again on every open — no other file in this system works that way. When it grows past the ceiling, what grew is almost always a dated paragraph, and its home is `DECISIONS.md`. **Move it. Never summarise it into both places**, or the two copies drift and the board starts contradicting its own table.
 - **A `Whose business` column appears here the day one of these branches stops being the owner's** — someone else's product, a relative's business, a client's material. Until that day it would be one word repeated down the page. When it appears, `system/OWNERSHIP.md` appears with it, and the column links there.
