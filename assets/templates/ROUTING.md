@@ -108,6 +108,10 @@ Either way, the copying is the trivial part. **The work is reconciling what it d
 
 Folders arrive in one of two states, and they need opposite treatment.
 
+**Cannot tell which?** **Treat it as organised: change nothing inside it, and ask.** The two paths above prescribe *opposite* actions, so a wrong guess here is not a near miss — guessing "pile" at an organised folder re-cuts somebody's working project, and that is the one move in this whole procedure that cannot be undone. **The asymmetry is the whole argument:** an unnecessary question costs thirty seconds, while a folder that was already working and got reorganised has lost the muscle memory of whoever built it and no longer matches the copy it came from.
+
+**Two things "treat it as organised" does *not* mean.** It does not mean finish the import silently — the organised path ends in *"add the three branch files and stop"*, and stopping there while still unsure would file an unresolved question as a decision. **Ask which it is before the branch is called done.** And if the owner is not available, the rulebook's own default applies rather than a silent block: **leave the internal shape exactly as it is, carry on with everything outside it, and log the classification `assumed`** so the next session finds an open question instead of a settled one.
+
 **Already organised** — it has its own structure, and that structure works. **Leave it exactly as it is.** A branch is sovereign inside itself: the system governs where it lives, its row on the board, its state file and the trust vocabulary — never its internal shape. Re-cutting somebody's working project to satisfy a house style is tidiness for its own sake, and it destroys the muscle memory of the person who built it. Reconcile the collisions, add the three branch files, and stop.
 
 **A pile** — things were thrown in over months with no scheme. Here the opposite is true: importing it unchanged just relocates the mess and quietly makes it the system's problem.

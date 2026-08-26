@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.8 · 2026-08-26** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.9 · 2026-08-26** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
