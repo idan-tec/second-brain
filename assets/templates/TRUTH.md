@@ -32,7 +32,7 @@ Evidence of what happened — useful for reconstruction and audit. **Not an inst
 
 ### 6. `trust: needs-review`
 
-May be right, partial, or stale. **Never presented as fact before review.** Quoting one of these without saying so is the most common way a false thing quietly becomes true — and since trust is a label on the file rather than a folder it sits in, **read the first line before you quote anything.**
+May be right, partial, or stale. **Never presented as fact before review.** Quoting one of these without saying so is the most common way a false thing quietly becomes true — and since trust is a label on the file rather than a folder it sits in, **read the header block before you quote anything.**
 
 ### 7. `trust: superseded` and `archive/`
 

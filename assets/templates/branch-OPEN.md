@@ -1,5 +1,7 @@
 # << branch >> — open
 
+> **This file is what is still open. It is never the history of how it got opened.** A settled item leaves one line saying it is settled and where the reasoning went; the reasoning itself lives in `decisions/DECISIONS.md`.
+> **Ceiling: about 1KB per open item.** Past that, what grew is background that has become a narrative, and its home is the log. An open list nobody can finish reading has stopped being a list.
 > **This branch's list only.** Ids live in the `<< ABC >>-O*` namespace so they never collide with the brain's `O*`, or with the numbering an imported branch brought with it.
 > **What is open at brain level — ownership, money, anything crossing branches — belongs in [`../../decisions/OPEN.md`](../../decisions/OPEN.md)**, and the map at the top of that file is the roll-up of every list, including this one. **Add the row there in the same action that creates this file**, or this list is invisible from the only place that answers *"what is open across everything"*.
 > **This file was born with its first item and not before.** An open list created empty teaches the owner that there is nothing open here, which is a claim no empty file has earned.

@@ -1,6 +1,7 @@
 # << branch >> — the map
 
 > **This is how things get found here.** Read it instead of opening folders.
+> **It is a map, never a log.** A heading here names a topic, never a date. What happened on a date goes to `decisions/DECISIONS.md`; what changed about the branch goes to `STATE.md`. Dated sections appear in an index the same way they appear in a status file — someone adds today's work at the bottom because *never delete* seems to require it — and an index that is half journal stops being scanned, which costs the one thing this file exists to do.
 > Created once the branch passed ~5 files · updated: << YYYY-MM-DD >>
 
 **Grouped by topic, in the owner's own words** — not by kind, not by date, not by which stage of some process produced the file. A person looking for something remembers what it was *about*. Every heading below should be a phrase they would actually say.

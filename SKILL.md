@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.7 · 2026-08-26** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.8 · 2026-08-26** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -249,7 +249,7 @@ Open your first reply with one line so the owner can tell at a glance that you a
 
 Then the part that gets forgotten. **Filing is not finished when the file exists:**
 
-- File written, first line states `kind:` and `trust:`
+- File written, **header block** states `kind:` and `trust:` — directly under the title, above any content. **Not literally line one**: the title is line one, and a rule written that way is broken by every file that has ever existed
 - **Every claim inside it labelled `evidence:` · `inferred:` · `unknown:`** — `evidence:` names its source. A per-claim label, not a per-file one, and unlabelled is a defect. (Measured on a real install: a branch produced ~244KB of research with inference written in the voice of finding. Three of the claims the whole branch rested on were guesses, and the owner's verdict was that he could not learn anything from his own material because the ground floor was wrong. Use the owner's own words for the three labels if the folder is not in English.)
 - Row added to the branch `INDEX.md`, under a topic heading in the owner's words (create it from `branch-INDEX.md` once the branch passes ~5 files — it is the retrieval surface, so it is not optional once there is anything to retrieve)
 - Branch `STATE.md` last-touched date updated
@@ -269,11 +269,11 @@ Skipping the index or the state update is the real failure mode. The file exists
 
 **Asked to verify an import someone says already happened?** That is a different operation, and `ROUTING.md` has it. The short version: *"it was already integrated"* is a memory, not evidence, and the action it invites is deletion. Check by hash, then check the failures **by filename** — the pass everyone skips, and the one that separates *edited after arriving* from *never arrived*. Report three groups, not one number.
 
-**Keep the index current, and let the folder stay flat.** `notes/` holds everything; `kind:` and `trust:` are the file's first line. Sub-folders only when the pile genuinely hurts to scan — and then **named by topic, in the owner's words**, never by lifecycle stage. Say so before creating one; never grow structure silently.
+**Keep the index current, and let the folder stay flat.** `notes/` holds everything; `kind:` and `trust:` sit in the file's header block, under the title. Sub-folders only when the pile genuinely hurts to scan — and then **named by topic, in the owner's words**, never by lifecycle stage. Say so before creating one; never grow structure silently.
 
 The reason is retrieval, and it is the thing these systems get wrong most often. **People look for things by what they are about.** A tree sorted by stage-of-process asks them to reconstruct a classification they never made, so the material is technically filed and practically gone. `INDEX.md` grouped by topic, plus plain search over markdown, is what actually finds things — folders are only storage.
 
-**There are two valid ways to say trust, and a branch uses one of them, never both.** A branch this system creates uses the first-line label: flat `notes/`, `kind:` and `trust:` on line one. **A branch that arrived already sorted into `current/` · `needs-review/` · `completed/` keeps its folders** — the four words are fixed everywhere and mean the same thing in either form. Re-cutting a working project to match the house style destroys the muscle memory of whoever built it, and a copy reshaped away from its source stops being comparable to it. **What is never allowed is one branch using both**, because then a file's trust has two answers and nothing says which is stale. `INDEX.md` is what makes either form findable, which is why it is the part that is not optional.
+**There are two valid ways to say trust, and a branch uses one of them, never both.** A branch this system creates uses the header label: flat `notes/`, `kind:` and `trust:` directly under the title. **A branch that arrived already sorted into `current/` · `needs-review/` · `completed/` keeps its folders** — the four words are fixed everywhere and mean the same thing in either form. Re-cutting a working project to match the house style destroys the muscle memory of whoever built it, and a copy reshaped away from its source stops being comparable to it. **What is never allowed is one branch using both**, because then a file's trust has two answers and nothing says which is stale. `INDEX.md` is what makes either form findable, which is why it is the part that is not optional.
 
 ---
 

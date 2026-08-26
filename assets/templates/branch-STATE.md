@@ -1,6 +1,10 @@
 # << branch >> — state
 
 > **State: << 🟢 | 🟡 | 🔴 | ⚪ >>** · **Last touched: << YYYY-MM-DD >>**
+>
+> **This file is the next step here. It is never history.** What happened and why goes to `decisions/DECISIONS.md` · what is open goes to this branch's `OPEN.md` · what exists and where goes to `INDEX.md`.
+> **Ceiling: about 4KB.** The rulebook makes every session touching this branch read this file first, so whatever sits here is paid again on every open — this file and the board are the only two that work that way.
+> **The specific way it breaks:** a session adds what it did today as a dated section at the bottom. That *feels* like obeying *never delete* — and nothing told it the addition belongs in the log instead. Repeat for three weeks and the status file is a second, worse copy of the decision log. **A section here that opens with a date belongs in `DECISIONS.md`. Move it; never summarise it into both.**
 
 << One sentence: where this stands. For a healthy branch in maintenance, "fine, nothing to report" is a complete answer. >>
 

@@ -38,7 +38,7 @@ Then open your first reply with: **`branch: <name> · read: BOARD, <compass file
 Full procedure: `system/ROUTING.md`. **Read it before creating any file.** Short form, in order:
 
 1. Which branch owns this? *(none fits → `inbox/`)*
-2. Is it **evidence**, a **decision**, **work**, or **proof**? → `kind:` on line one
+2. Is it **evidence**, a **decision**, **work**, or **proof**? → `kind:` in the header block
 3. How far is it trusted? → `current` · `needs-review` · `completed` · `superseded` (see §4 for the two ways to say it)
 4. How sensitive is it? → inherit the branch, and ask if this item is more sensitive than its home.
 
@@ -64,7 +64,7 @@ A branch is `README.md` + `STATE.md` + `CLAUDE.md` + **its own `OPEN.md`**, plus
 
 **The four trust words are fixed everywhere — `current` · `needs-review` · `completed` · `superseded` — but there are two valid ways to say them, and a branch uses one, never both:**
 
-- **First-line label** (the default for a branch this system creates): everything lands in `notes/`, flat, and line one reads `kind: evidence | decision | work | proof · trust: <word> · <date if it states a fact>`.
+- **Header label** (the default for a branch this system creates): everything lands in `notes/`, flat, and the file opens `kind: evidence | decision | work | proof · trust: <word> · <date if it states a fact>` — **directly under the title, above any content.** Not literally line one: every file starts with its heading, and a rule written as *"line one"* is one every file quietly breaks.
 - **Trust folders** (`current/` · `needs-review/` · `completed/`): for a branch that **arrived already organised that way.** Keep it. Re-cutting a working project to satisfy a house style destroys the muscle memory of whoever built it, and a copy reshaped away from its source stops being comparable to it.
 
 **Folders are storage. `INDEX.md` is how anything is found.** People look for things by what they are *about*, never by which stage produced them. The index, grouped by topic in the owner's words, plus plain search across markdown, is the retrieval surface — and it is what makes either form above safe.
