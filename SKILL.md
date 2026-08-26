@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.6 · 2026-08-26** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.7 · 2026-08-26** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -344,7 +344,7 @@ Say this out loud at bootstrap: without the review, everything above is a folder
 
 ## Structure ceilings
 
-**Max 3 levels below a branch** · **max ~7 items in any one view, excluding tool files like `CLAUDE.md`** (they have to sit where their tool finds them, so they do not count against readability) · **a folder is justified from the 3rd sibling file** · **zero empty folders**. The depth ceiling binds structure this system creates — **an imported branch's own tree is exempt**, however deep it runs.
+**Max 3 levels below a branch** · **max ~7 items in any one view, excluding tool files like `CLAUDE.md`** (they have to sit where their tool finds them, so they do not count against readability) · **a folder appears from the ~5th row under its topic heading in `INDEX.md`** · **zero empty folders**. The depth ceiling binds structure this system creates — **an imported branch's own tree is exempt**, however deep it runs.
 
 **Dot-directories are tools, not content.** `.obsidian/`, `.claude/`, `.git/` and their kind belong to whatever the owner uses to read, edit, sync, or version this folder. They do not count against any ceiling, they are never tidied away, and they are never treated as clutter to clean up — deleting one throws away someone's settings or history. The folder is plain text on disk precisely so that these can come and go without it mattering; leave them alone.
 

@@ -74,7 +74,8 @@ Every one of these, every time:
 - **Never create an empty folder.** It appears with its first file.
 - **Three levels below a branch — for structure this system creates.** Deeper needs a written reason in the branch README. **An imported branch's own tree is exempt**, however deep it runs; it is governed by whatever built it.
 - **About seven items per view**, excluding tool adapters. Past that, people stop scanning and start missing things.
-- **A folder is justified from the third sibling.** One file does not get a house.
+- **A folder appears from about the fifth row under its topic heading in `INDEX.md`.** One file does not get a house — and the count is **rows in the index, never a scan of the folder**, because no session reads a whole branch and a rule that needs a file count is a rule nobody applies. A new area of activity is a **heading** from the day it is declared; the folder follows the material.
+- **No number prefixes on folder names.** `05-marketing` only holds up in a tree built in one sitting. These folders are born in the order life happens, and the numbers start lying within a month. The name is the topic, in the owner's words — identical to the index heading, and **the same word in every branch** that has that topic.
 - **No absolute paths. Anywhere.**
 
 ## Taking in an entire existing folder

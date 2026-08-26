@@ -71,7 +71,13 @@ A branch is `README.md` + `STATE.md` + `CLAUDE.md` + **its own `OPEN.md`**, plus
 
 **Never invent a stage tree for material that arrived without one.** New sub-folders are named by topic in the owner's words. Propose; never grow structure silently.
 
-Ceilings — **on structure this system creates, never on a branch's own imported tree**: **3 levels below a branch** · **~7 items per view, excluding tool files** · a folder is justified from the 3rd sibling · `INDEX.md` once a branch passes ~5 files.
+**A new area of activity inside a branch is born as a heading in `INDEX.md`, not as a folder.** The moment the owner says they are starting something here — marketing, hiring, a product line — that topic gets its heading in the index, with one row under it or none. **The folder appears only when the topic passes ~5 rows**, and is then named exactly like the heading. The order is visible from the first minute; the folder waits until there is something to put in it. A topic declared and then dropped leaves a heading to delete, not a near-empty folder that reads as a live area for the next year.
+
+**How the count is taken: rows under that heading in `INDEX.md` — never by scanning the folder.** No session reads a whole branch, so a rule that needs a file count is a rule nobody can apply. The index is opened anyway on every filing, which is what makes this one enforceable. **Two consequences:** the folder is named in the owner's words, exactly as the heading reads · and **no number prefixes on folders this system creates** — folders born in the order life happens will contradict any numbering within a month.
+
+**One topic, one word, across every branch.** Marketing is not `marketing/` here and `promo/` there; the word is fixed the first time it is used and reused after that, or nothing can be asked across branches.
+
+Ceilings — **on structure this system creates, never on a branch's own imported tree**: **3 levels below a branch** · **~7 items per view, excluding tool files** · **a folder appears from the ~5th row under its `INDEX.md` heading** · `INDEX.md` once a branch passes ~5 files.
 
 **Goals never live in a branch, and neither does `NOW`.** They live in `compass/` only — `SEASON.md` and `NOW.md`. A branch may link to a goal; it never copies one. Two copies of a goal is two goals that will disagree, and **four `NOW` files are four things that are all urgent and nothing that chooses between them** — which is the only question a person with several branches actually needs answered. "The next step *here*" is `STATE.md`, and that is a different question.
 
