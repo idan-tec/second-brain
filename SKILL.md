@@ -5,7 +5,7 @@ description: Turn a single folder into a person's second brain and then govern i
 
 # second-brain
 
-**version 0.2.5 · 2026-08-20** — one folder holds a person's whole life. This skill is how any agent works with it.
+**version 0.2.6 · 2026-08-26** — one folder holds a person's whole life. This skill is how any agent works with it.
 
 *(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
 
@@ -250,6 +250,7 @@ Open your first reply with one line so the owner can tell at a glance that you a
 Then the part that gets forgotten. **Filing is not finished when the file exists:**
 
 - File written, first line states `kind:` and `trust:`
+- **Every claim inside it labelled `evidence:` · `inferred:` · `unknown:`** — `evidence:` names its source. A per-claim label, not a per-file one, and unlabelled is a defect. (Measured on a real install: a branch produced ~244KB of research with inference written in the voice of finding. Three of the claims the whole branch rested on were guesses, and the owner's verdict was that he could not learn anything from his own material because the ground floor was wrong. Use the owner's own words for the three labels if the folder is not in English.)
 - Row added to the branch `INDEX.md`, under a topic heading in the owner's words (create it from `branch-INDEX.md` once the branch passes ~5 files — it is the retrieval surface, so it is not optional once there is anything to retrieve)
 - Branch `STATE.md` last-touched date updated
 - `BOARD.md` row updated

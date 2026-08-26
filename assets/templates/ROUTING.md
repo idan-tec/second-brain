@@ -60,6 +60,7 @@ Two habits that cost a line each and are the difference between a record and a r
 Every one of these, every time:
 
 1. The file, with `kind:` and `trust:` on the first line — and, for anything factual, **the date it was true**.
+   **Inside the file, every claim carries `evidence:` · `inferred:` · `unknown:`**, and an `evidence:` claim names where it came from. This is per claim, not per file: a `kind: evidence` note still labels each line in it. Unlabelled is a defect — six weeks on, an inference in the voice of a fact is indistinguishable from one, and whatever was built on it inherits the error.
 2. **A row in the branch's `INDEX.md`** (created once the branch passes ~5 files).
 3. **The branch's `STATE.md`** — at minimum, the last-touched date.
 4. **The `BOARD.md` row.**
