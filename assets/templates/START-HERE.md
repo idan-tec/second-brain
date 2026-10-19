@@ -1,41 +1,38 @@
-# << the owner's name for this — "my second brain", or whatever they call it >>
+# << the owner's name for this: "my work brain", or whatever they call it >>
 
 > The one file a human opens. Everything else is reached from here.
-> **system:** second-brain << version — copy the version line from the skill's header >> · **storage:** << OneDrive only | OneDrive + git | local only >>
+> **system:** second-brain << version: copy the version line from the skill's header >> · **storage:** << OneDrive only | OneDrive + git | local only >>
 
 ## What this is
 
-One folder that runs a whole life. Each area is a **branch**. There is no limit on how many and no preset list — the owner decides what their branches are, and **nothing was decided for them at setup: this folder starts with no areas in it at all.** The first one appears when they bring something that belongs to one, and they name it.
+One folder that holds my work: **what I decided, what is waiting on me, and where each area of my work stands.** Each area (a client, a project, a team, a process I run) gets its own place, and **nothing was decided for me at setup: this folder starts with no areas in it at all.** The first one appears when I bring something that belongs to one, and I name it.
 
-Any agent that opens this folder — any tool, any session, no prior context — reads the same rules and learns who this person is, what matters to them, and where everything lives.
+Any agent that opens this folder, in any session and with no prior context, reads the same rules and learns what I decided, what I owe, what I am owed, and where everything lives.
 
-## The path in (about four minutes)
+## The path in (about two minutes)
 
-1. **[BOARD.md](BOARD.md)** — one screen: every branch, its state, when it was last touched, and anything not yet set up. **Always start here.**
-2. **[decisions/OPEN.md](decisions/OPEN.md)** — what is waiting on me alone.
-
-**Once `compass/` exists** — it is not created at setup, and it appears only if I decide I want it:
-`compass/NOW.md` (this week) · `compass/SEASON.md` (this cycle's three to five goals, across everything) · `compass/HORIZON.md` (one to three years) · `compass/WHO-I-AM.md` (what settles things for me).
+1. **[TASKS.md](TASKS.md)**: what is waiting on me. One list; every card says what is happening and what to do.
+2. **[BOARD.md](BOARD.md)**: every area of my work on one screen, and when each was last touched.
+3. **[DECISIONS.md](DECISIONS.md)**: what was decided, when, by whom, and in whose words.
 
 ## What lives where
 
 | | |
 |---|---|
-| `BOARD.md` | The board. Every branch on one screen |
-| `compass/` | Vision and goals — **only here, never inside a branch** |
-| `branches/` | One per area of life. **Nothing here at setup** — the folder itself appears with the first area I name |
-| `decisions/` | `DECISIONS.md` — what was decided and why (append-only, and it stays one file) · `OPEN.md` — what is stuck on me at the level of the whole folder, and the map of every open list in it |
-| `system/` | `ROUTING.md` (where things go) · `TRUTH.md` (who wins in a conflict) << · `OWNERSHIP.md` — whose business each branch is and where every repo, database and automation lives. This one appears only once some branch here is not mine >> |
-| `inbox/` | Thrown in, not yet placed. **The correct default, not a failure** |
-| `archive/` | Reached only by explicit decision. **Nothing is ever deleted** |
-| `CLAUDE.md` | The rulebook for agents — loads by itself. The owner never has to read it |
+| `TASKS.md` | Everything that needs me: to decide, to do, to approve, or to chase from someone else |
+| `DECISIONS.md` | What was decided and why. Append-only: nothing in it is ever edited |
+| `BOARD.md` | The board. Every area on one screen |
+| `areas/` | One per area of my work. **Not here at setup**: the folder appears with the first area I name |
+| `inbox/` | Thrown in, not yet placed. **Appears with its first item**, and is the correct default, not a failure |
+| `archive/` | Retired material, with a date. **Appears the first time something is retired.** Nothing is ever deleted |
+| `CLAUDE.md` | The rulebook for agents. It loads by itself; I never have to read it |
 
 ## The three things that keep this alive
 
-1. **The weekly review** — NOW against SEASON. Without it, this is a folder of dead files within six weeks.
-2. **Every decision gets written down**, with a date and a reason.
+1. **The weekly review**: the task list, end to end. Without it, this is a folder of dead files within six weeks.
+2. **Every decision gets written down**, with the date and the words that decided it.
 3. **Nothing is deleted or overwritten.** It moves to `archive/` with a date.
 
 ## How this gets used
 
-Throw material at the agent — a note, a link, a document, an idea, a whole folder. It asks a few questions and files it. Knowing where things go is not the owner's job.
+Talk to the agent about your work. When you decide something, it goes in the log. When you mention something you have to do, decide, approve or wait for, it becomes a card. When you hand over a note, a document or a whole folder, it gets filed. **Knowing where things go is not your job**, and every time something is written down, the agent says in one line where it went.
