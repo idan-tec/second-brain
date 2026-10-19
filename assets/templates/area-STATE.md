@@ -14,8 +14,9 @@
 
 ## After something else happens
 
-<< Things that cannot start yet, so they are not cards:
-   `- After the contract is signed: send the onboarding pack.`
+<< Only things waiting on something that is nobody's to deliver (a season, a date, a market):
+   `- After the January price list comes out: update the quote template.`
+   Anything waiting on a person goes on that person's waiting card in TASKS.md instead.
    The day the condition is met, the line becomes a card in TASKS.md and leaves this file. Delete the section if it is empty. >>
 
 ---

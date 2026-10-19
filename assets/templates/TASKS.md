@@ -2,7 +2,8 @@
 
 > **The one list.** Everything that needs me (to decide, to do, to approve, or to chase from someone else) is a card here, and nowhere else: not in chat, not in a report, not in an area's notes.
 > **The test for every card:** I read it on my phone, having read nothing else today, and I can act on it. If I would need to know what happened in some session to understand it, the card is not finished.
-> **Order:** by due date, earliest first; cards with no date last, unless I put them in an order of my own. **Updated: << YYYY-MM-DD >>**
+> **Order:** by date, earliest first (a *waiting* card by its nudge day, every other card by its due date), then undated cards by the day they opened, unless I put them in an order of my own.
+> **A card is a working surface**: it is updated in place, and a date that moves keeps its old value beside it. Closed, it becomes one line under *Done and cancelled*. **Updated: << YYYY-MM-DD >>**
 
 ## Waiting on me
 
@@ -12,10 +13,11 @@
 ### << a verb and a thing, in plain words: "Send Dana the Q1 numbers". Never an internal code >>
 - **Kind:** << decide · do · approve · waiting, in this folder's words >> · **Area:** << name, or "general" >> · **Opened:** << YYYY-MM-DD >> · **Due:** << YYYY-MM-DD, with the word it came from, e.g. "(Thursday)" · or — >> << · **Urgency:** only if I said it >>
 - **What's happening:** << two or three lines for someone who was not following: what this is about, and why it is coming up now >>
-- << decide → >> **Options:** << A: what it means in practice · B: … >> · **Recommendation:** << one option, with the reason >>
+- << decide → >> **Options:** << A: what it means in practice · B: … >> · **Recommendation:** << one option, with the reason · or "none yet", and what would give one >>
 - << do → >> **Done looks like:** << in my words, or "not said" >> << · **Steps:** 1. where to go · 2. what to click · 3. the full text to paste, when they are known >> << · **Takes:** minutes, if known >>
 - << approve → >> **Check:** << 1. what to look at · where to find it · answer: — >> << one line per check, each with its own answer >>
-- << waiting → >> **From:** << who >> · **What exactly:** << what they owe me >> · **Since:** << YYYY-MM-DD >> · **Nudge on:** << the day I named, or a day marked "proposed" >>
+- << waiting → >> **From:** << who >> · **What exactly:** << what they owe me >> · **Since:** << YYYY-MM-DD >> · **Promised for:** << their date, if they gave one >> · **Nudge on:** << the day I named, or a day marked "proposed" >>
+- << any card something else waits on → >> **When this is done:** << what becomes possible, e.g. "send the onboarding pack". It becomes its own card that day >>
 - << not on a waiting card → >> **Who asked:** << me · a name, with their words if there were any >>
 - << only on a card Claude raised → >> **Why it's on me:** << why Claude cannot do this one >>
 - **If I don't act:** << the default, and the date it takes effect, or "blocks: <what>" >>

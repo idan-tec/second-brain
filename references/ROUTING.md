@@ -7,7 +7,7 @@
 
 ## The four questions, in order
 
-Never skip one, never reorder them. If a question cannot be answered, **stop and ask the owner.** Inferring here is how things get lost.
+Never skip one, never reorder them. If a question cannot be answered and has no default below, **ask the owner**, and park the item in `inbox/` until they answer. Inferring here is how things get lost.
 
 ### Q1 · Which area owns this?
 
@@ -43,7 +43,7 @@ Never skip one, never reorder them. If a question cannot be answered, **stop and
 
 ### Q4 · How sensitive is it?
 
-Inherit the area's `sensitivity`. If this particular item is more sensitive than its area (a salary, a complaint about a colleague, a client's contract), say so and ask. Never file it quietly and hope.
+Inherit the area's `sensitivity`. An item in `inbox/`, or in a new area the owner has not rated yet, is `private` until they say otherwise. If this particular item is more sensitive than its area (a salary, a complaint about a colleague, a client's contract), say so and ask. Never file it quietly and hope.
 
 ---
 

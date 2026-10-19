@@ -9,7 +9,7 @@
 
 ---
 
-### << YYYY-MM-DD >> · << area · "general" while no area fits · "system" for the folder itself >> · << what was decided, in one line >>
+### << YYYY-MM-DD: the day it was decided; add "logged <date>" when that is later >> · << area · "general" while no area fits · "system" for the folder itself >> · << what was decided, in one line >>
 **In their words:** «<< the sentence, quoted >>», << whose sentence: mine · relayed by me · a name >> · **Decided by:** << me · my manager, named · the client, named >>
 **Why:** << the reason as it was given, or "not said". Never a reason nobody gave >>
 **Replaces:** << what this overrides · "nothing" · "not said" >> · **Binds:** << where it now applies: the area's README · the standing rules at the end of CLAUDE.md · "this once" >>

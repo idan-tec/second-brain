@@ -38,11 +38,11 @@ The same split runs through everything: **their content in their language**: dec
 Templates split in two:
 
 - **The frame, which is the whole root `CLAUDE.md` except what goes under its last two headings, installs verbatim, in English.** Nobody but an agent reads it, agents read English perfectly well, and keeping it byte-identical across installs is what makes the system teachable, upgradeable and checkable.
-- **Everything the person reads (`START-HERE`, `BOARD`, `TASKS`, `DECISIONS`, every area's `README` and `STATE`) is written in their language.** In a language other than English, *copy and fill* means: keep the template's structure, with every heading, field and rule present, translated; add nothing from memory, drop nothing.
+- **Everything the person reads (`START-HERE`, `BOARD`, `TASKS`, `DECISIONS`, every area's `README` and `STATE`) is written in their language.** In a language other than English, *copy and fill* means: keep the template's structure, with every heading, field and rule present, translated; add nothing from memory, drop nothing. The one exception is a section the template marks *born with its first item*: it waits for that item.
 
-**A handful of words are vocabulary, not prose:** the four card kinds (decide · do · approve · waiting), the four trust words, the three claim labels (evidence · inferred · unknown), and `assumed`. At setup, choose one word for each in their language and write them under section 8 of the rulebook, *This folder's words*. Every session reads that section, so every session writes, and searches for, the same words. A session that picks its own translation writes cards that the next session's search cannot find. In an English folder, the section says so in one line.
+**Some words are vocabulary, not prose**: card kinds, trust words, claim labels, `assumed` and the rest. The full list lives in one place, the template of section 8 of the rulebook, *This folder's words*. At setup, choose one word for each in their language and write them there. Every session reads that section, so every session writes, and searches for, the same words. A session that picks its own translation writes cards that the next session's search cannot find. In an English folder, the section says so in one line.
 
-**In a language that marks gender**, follow the form the person uses about themselves; until they have used one, write neutral forms.
+**In a language that marks gender**, follow the form the person uses about themselves; until they have used one, write neutral forms. The first time they do, write it in section 8, so the next session does not have to guess.
 
 ## If the folder already exists
 
@@ -84,7 +84,7 @@ Install all of this in one go, in a single turn:
 |---|---|
 | `root-CLAUDE.md` | `CLAUDE.md`: the rulebook, at the root |
 | `START-HERE.md` | `START-HERE.md`: the one file a human opens |
-| `BOARD.md` | `BOARD.md`: no rows yet |
+| `BOARD.md` | `BOARD.md`: the "no areas yet" paragraph in place of the table |
 | `TASKS.md` | `TASKS.md`: one card, the copy question (*Make it portable*, below) |
 | `DECISIONS.md` | `DECISIONS.md`: holding only the assumptions this setup took |
 
@@ -102,13 +102,13 @@ A default area is the setup question again, written to disk instead of asked alo
 
 **Where the first things go before any area exists:** decisions to `DECISIONS.md`, tasks to `TASKS.md`, and material to `inbox/`, which is created with its first item. Nothing is lost there, and nothing pretends to be filed.
 
-**How the first area is born.** The moment material plainly belongs to one area of their work (not a kind of file, an *area*), or the same client or project keeps coming up in what they say, say what you noticed and let them name it: *"Everything you've put in so far is about the same client. Do you want it as its own area? What do you call it?"* **Their word, not yours.** That is the one question worth spending here, and it is the same question that creates every area after it.
+**How the first area is born.** The moment material plainly belongs to one area of their work (not a kind of file, an *area*), or the same client or project keeps coming up in what they say, say what you noticed and let them name it: *"Everything you've put in so far is about the same client. Do you want it as its own area? What do you call it?"* **Their word, not yours.** That is the one question worth spending here, and it is the same question that creates every area after it. **Like everything that needs them, it is also a *decide* card** (*"Decide whether Acme gets its own area"*): what you noticed, your recommendation, the sensitivity you propose for it, and the default, which is that everything stays where it is. Asked only in chat, the question is gone by the next session.
 
 **Watch for the right thing.** A cluster of files is not an area of work. If it were, everyone would end up with an area called "invoices". This list is not a taxonomy, it is never read out as a menu, and it never becomes folders. It exists so you can *recognise* an area when one turns up:
 
 > a client · a project · a product · a team they lead · a process they own (hiring, payroll, purchasing, onboarding) · a supplier · a recurring report · a course they teach · a side business
 
-When they say no, record it and do not raise it again.
+When they say no, close the card with their words, log it in `DECISIONS.md`, and do not raise it again.
 
 **And say what the board says on day one: nothing.** Zero rows, with a line stating that plainly and saying what makes the first one appear, and one card, the copy question. An empty board is not a broken board.
 
@@ -153,10 +153,10 @@ Building without questions means taking assumptions on the owner's behalf. That 
 
 Whether the folder keeps its own copy of this skill, in `<their folder>/.claude/skills/second-brain/`, is the owner's call, so it is not asked out loud and not left in chat: **it is the first card in `TASKS.md`**, a *decide* card, written at setup. It is also the first card they ever see, which makes it the example of what every card after it looks like.
 
-- **A · keep a copy in the folder.** The folder carries its own rules, including `references/ROUTING.md`, and survives a dead laptop, a new machine and a different tool. The copy does not update itself; updating means pasting the install line again inside the folder.
-- **B · no copy.** The folder relies on the skill installed on this computer, and updates whenever that does. On a new computer, the install line has to be pasted once.
-- **Recommendation:** A if the folder syncs to a cloud drive or moves between machines; otherwise B.
-- **If they do nothing:** B. Nothing is copied.
+- **A · keep a copy in the folder.** The folder carries its own rules, including `references/ROUTING.md`, and survives a dead laptop, a new machine and a different tool. The copy does not update itself. To update it, they paste, in Claude Code inside the folder: `Update the copy of the skill in .claude/skills/second-brain in this folder from https://github.com/idan-tec/second-brain`
+- **B · no copy.** The folder relies on the skill installed on this computer, and updates whenever that does. On a new computer, they paste the install line once: `Install the skill from https://github.com/idan-tec/second-brain into ~/.claude/skills/second-brain`
+- **Recommendation:** A if they sync this folder to a cloud drive or use it on more than one computer; otherwise B. Only they know which, which is why it is their card.
+- **If they do nothing:** B, from now on. Nothing is copied.
 
 ---
 
@@ -186,7 +186,7 @@ Open your first reply with one line, so the owner can tell at a glance that you 
 
 `area: <name> · read: BOARD, TASKS, <area>/STATE`
 
-With no area in play: `area: — · read: BOARD, TASKS`. The session that ran BOOTSTRAP skips the line; it wrote the files it would have read.
+With no area in play: `area: — · read: BOARD, TASKS`. The line is a fixed format, in English whatever the language of the reply, and `area:` takes the area's folder name. The session that ran BOOTSTRAP skips the line; it wrote the files it would have read.
 
 **Then, before answering anything: is it already here?** Look for it in `TASKS.md` and `DECISIONS.md` first, and if it is there, say so before anything else: *"Already on your list since 14/10: Send Dana the Q1 numbers. Do it now?"* · *"You decided this on 02/10: «we only quote in shekels». Does it still hold?"* That one look is what stops the same task being written three times and the same question being decided twice, differently.
 
@@ -200,7 +200,9 @@ With no area in play: `area: — · read: BOARD, TASKS`. The session that ran BO
 
 ### A decision
 
-**What it sounds like:** *"from now on…"*, *"we're going with…"*, *"let's not…"*, *"I told the client…"*, *"my manager decided…"*, *"fine, X it is."* In any language: listen for the shape, not the phrase.
+**What it sounds like:** *"from now on…"*, *"we're going with…"*, *"let's not…"*, *"we told the client we'd go with…"*, *"my manager decided…"*, *"fine, X it is."* In any language: listen for the shape, not the phrase.
+
+**A promise is not a decision.** *"I said I'd get back to them by the end of the month"* is something to do: a *do* card, with the promise quoted. It is a decision only if it also settles something going forward, and then it is both, each in its own place.
 
 In the same turn:
 
@@ -224,14 +226,16 @@ Four kinds, and the kind decides what the card must carry:
 
 | Kind | Must carry |
 |---|---|
-| **decide** | the options, what each one means in practice, and your recommendation |
+| **decide** | the options, what each one means in practice, and your recommendation. With no basis for one, say so and name what would give you one (*"no recommendation yet: the folder has neither the current price nor the margin"*); that is a recommendation about what to bring |
 | **do** | what done looks like; and when the steps are known, the steps (where to go, what to click, the full text to paste) |
 | **approve** | each thing to check, where to find it, and a separate answer for each one |
 | **waiting** | who owes it, what exactly, since when, and the day to nudge |
 
 And every card, whatever its kind, says **what happens if they do not act**: the default and when it takes effect, or "this blocks …". An open item with no recommendation and no default hands responsibility back instead of asking for a decision, and it is the reason lists like this stop being read.
 
-**The due date, the urgency, what done looks like and the day to nudge are the owner's terms, not yours.** Write what they said. Where they said nothing: leave urgency out, write "not said" for done, and for a nudge day propose one, marked *proposed*, and say so in the chat line. A date you worked out keeps the word it came from: `2026-10-22 (Thursday)`. Cards are ordered by due date, earliest first, and cards with no date go last, unless the owner has put them in an order of their own.
+**The due date, the urgency, what done looks like and the day to nudge are the owner's terms, not yours.** Write what they said. Where they said nothing: leave urgency out, write "not said" for done, and for a nudge day propose one, marked *proposed*, and say so in the chat line. A date you worked out keeps the word it came from: `2026-10-22 (Thursday)`. Cards are ordered by date, earliest first (a *waiting* card by its nudge day, every other card by its due date), then undated cards by the day they were opened, unless the owner has put them in an order of their own.
+
+**A card is a working surface, so it is updated in place** as things change. A date that moves keeps its old value beside it (*"nudge on 2026-10-26, was 2026-10-20"*). On closing, it shrinks to one line under *Done and cancelled*; anything in its body worth keeping (a decision, a quote) has already gone to `DECISIONS.md` or to a note.
 
 **Cards and log entries carry no evidence / inferred / unknown labels; their fields do that job.** A quote is the evidence, *proposed* marks what you inferred, and *not said* marks what is unknown. The labels are for claims inside filed material.
 
@@ -239,7 +243,7 @@ And every card, whatever its kind, says **what happens if they do not act**: the
 
 Three more rules, each from a real failure:
 
-- **A card opens when it can be acted on.** Something that cannot start until something else is done is a line in the area's `STATE.md` (*"after the contract is signed: send the onboarding pack"*), not a card. A list full of things nobody can do yet teaches the person that the list is not for doing.
+- **A card opens when it can be acted on.** Something that cannot start until something else is done waits on the card for that thing, usually a *waiting* card, as one line: *"when it arrives: send the onboarding pack"*. If there is no such card, open the *waiting* card first. Only when the thing it waits for is not anyone's to deliver does the line go in the area's `STATE.md`. A list full of things nobody can do yet teaches the person that the list is not for doing.
 - **An answer closes its card in the same turn.** The card moves to *Done and cancelled* with the date and **what they said, in their words**. If the answer was a decision, it also gets its line in `DECISIONS.md`. **An answer that lives only in chat is lost the moment the next question arrives.** Measured on a real working project: five separate "waiting on you" lists, ninety-odd lines, most of them already settled, and the owner's words: *"it gives me tasks and I don't know what it's talking about… I ask about one and the others get lost."* One list of cards replaced all five.
 - **Nothing that needs the person lives anywhere else.** Not in a report, not in an area's notes, not as a line at the bottom of a long answer. If it needs them, it is a card.
 
@@ -272,7 +276,7 @@ Skipping the index or the state update is the real failure mode. The file exists
 
 **Unsure which area?** `inbox/`, with a line in the file's header saying what it is and why it was not placed. Never invent an area to hold one file. A wrong file in a right-looking place reads as *decided*; an honest unsorted one reads as *pending*.
 
-**When an area is born** (the owner names one, or a cluster in `inbox/` turns out to be an area of their work), it gets `README.md` and `STATE.md` from `area-README.md` and `area-STATE.md`, **plus its row on `BOARD.md` in the same action.** If it is the first area, it creates `areas/` too, and the board's "no areas yet" line comes out in the same edit.
+**When an area is born** (the owner names one, or a cluster in `inbox/` turns out to be an area of their work), it gets `README.md` and `STATE.md` from `area-README.md` and `area-STATE.md`, **plus its row on `BOARD.md` in the same action.** Its sensitivity is the owner's word; until they give one, it is `private`. In the same action, move in what belongs to it (its material from `inbox/`, any standing rule of its own), put its name in the *Area* field of its cards, and leave nothing pointing at the old place. If it is the first area, it creates `areas/` too, and the board's "no areas yet" line comes out in the same edit.
 
 **Taking in a whole existing folder?** The test is simple: **does it have a live `.git`, or is anything actively writing to it?** If yes, make it a *pointer* area: a `README.md` and `STATE.md` saying where it lives and how to work with it, nothing copied, nothing moved. If no, make it a *contained* area: **copy, never move**, verify the copy before touching the original, then reconcile the roles it duplicates. **A contained take-in is not finished until the duplicate it created is closed**: hash every file both ways, account for every difference, rescue anything unique, then hand the decision over in one line (*"the original is now redundant: delete it, or keep it as a backup?"*). Never delete it unasked, and never leave the question unasked. The full procedure, and how to verify an import someone says already happened, is in `references/ROUTING.md`.
 

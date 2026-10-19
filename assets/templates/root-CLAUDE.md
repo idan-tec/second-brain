@@ -3,7 +3,7 @@
 > **second-brain v0.3.** This file holds only what does not change between sessions.
 > It carries the name `CLAUDE.md` so Claude Code loads it automatically for every session at or below this folder; the rules do not depend on anyone remembering to read them. The version marker above is also how the second-brain skill recognises this folder: by this line, never by the folder's name.
 > What changes lives elsewhere: what is waiting in `TASKS.md`, what was decided in `DECISIONS.md`, where things stand in `BOARD.md` and in each area's `STATE.md`. **Never put state here.**
-> Everything in this file installs verbatim, in English, except what goes under the headings of sections 7 and 8: that is this folder's own. Ceiling: about 130 lines, because every session reads every line.
+> Everything in this file installs verbatim, in English, including the headings and quoted notes of sections 7 and 8. Only the lines written below those notes are this folder's own. Ceiling: about 130 lines, because every session reads every line.
 
 ## 0. Opening a session
 
@@ -14,7 +14,7 @@ Before any action, in this order:
 3. `TASKS.md`: what is waiting on the owner.
 4. The `README.md` and `STATE.md` of the area you are about to touch. **Nothing else loads automatically**; use the area's `INDEX.md` to find things.
 
-Open your first reply with **`area: <name> · read: BOARD, TASKS, <area>/STATE`** (no area in play: `area: — · read: BOARD, TASKS`). If that line is missing, the owner knows you did not read.
+Open your first reply with **`area: <name> · read: BOARD, TASKS, <area>/STATE`** (no area in play: `area: — · read: BOARD, TASKS`), in this fixed English form, with the area's folder name. If that line is missing, the owner knows you did not read.
 
 **Before answering any request, look for it in `TASKS.md` and `DECISIONS.md`.** Already there? Say so first: *"already on your list since <date>: <title>"* · *"you decided this on <date>: «…». Does it still hold?"*
 
@@ -30,7 +30,7 @@ Open your first reply with **`area: <name> · read: BOARD, TASKS, <area>/STATE`*
 | material: a note, a document, a link, a folder | its area, by the four questions in §3 | `Filed: <path>` |
 
 - **Nothing that needs the owner lives only in chat or in a report.** The conversation is gone tomorrow, and a request that is not on a card is lost the moment the next one arrives.
-- **Thinking aloud is not a decision.** Cannot tell? Ask one line: *"decided, or still open?"* Open means a *decide* card.
+- **Thinking aloud is not a decision.** Cannot tell? Ask one line: *"decided, or still open?"* Open means a *decide* card. **A promise is not a decision either**: *"I said I'd get back to them by Friday"* is a *do* card.
 - **Their words, not yours.** Quote the sentence and say whose it is; a relayed decision says it was relayed and names who decided. **Never invent a why**: if none was given, write "not said".
 - **Nothing lives only in the log.** A decision that binds future work also lands where it is applied, pointing back to its log entry by date and title. A rule for one area goes in that area's `README.md`; a rule for all work, or for an area not yet born, goes in section 7, and moves to the area's README the day the area is born.
 
@@ -58,7 +58,7 @@ Short form, in order (the full procedure is the skill's `references/ROUTING.md`)
 1. Which area owns this? *(none fits → `inbox/`; never invent an area to hold one file)*
 2. Is it **evidence**, a **decision**, **work**, or **proof**? → `kind:` in the header block, directly under the title
 3. How far is it trusted? → `trust:` `current` · `needs-review` · `completed` · `superseded`. **Default `needs-review`; only the owner promotes.**
-4. How sensitive is it? → inherit the area's; ask if this item is more sensitive than its home
+4. How sensitive is it? → inherit the area's (an `inbox/` item, or a new area the owner has not rated, is `private`); ask if this item is more sensitive than its home
 
 **Filing is not finished when the file exists:** a row in the area's `INDEX.md` · the area's `STATE.md` date · the `BOARD.md` row · a decision inside it → `DECISIONS.md` · something only the owner can settle → a card · and one line in chat saying where it went.
 
@@ -66,10 +66,11 @@ Short form, in order (the full procedure is the skill's `references/ROUTING.md`)
 
 **The test: the owner reads the card on their phone, having read nothing else today, and can act on it.** If they would need to know what happened in some session, the card is not finished.
 
-- Title: a verb and a thing, in plain words. Kind: **decide** (options + recommendation) · **do** (what done looks like, and the steps when they are known) · **approve** (each check, where to look, an answer per check) · **waiting** (who, what, since when, when to nudge).
+- Title: a verb and a thing, in plain words. Kind: **decide** (options + recommendation, or what is missing to make one) · **do** (what done looks like, and the steps when they are known) · **approve** (each check, where to look, an answer per check) · **waiting** (who, what, since when, when to nudge).
 - Every card says what is happening, in two or three lines, and **what happens if the owner does not act**: the default and when it takes effect, or "blocks …".
-- **Due date, urgency, what done looks like and the nudge day are the owner's terms.** Write what they said; otherwise leave urgency out, write "not said", and mark any date you suggest as *proposed*. A date you worked out keeps its word: `2026-10-22 (Thursday)`. Order: by due date, undated last.
-- **A card opens when it can be acted on.** Not yet actionable → a line in the area's `STATE.md`: *"after X: Y"*.
+- **Due date, urgency, what done looks like and the nudge day are the owner's terms.** Write what they said; otherwise leave urgency out, write "not said", and mark any date you suggest as *proposed*. A date you worked out keeps its word: `2026-10-22 (Thursday)`. Order: by date (a *waiting* card by its nudge day, others by due date), then undated ones by the day they opened.
+- **A card is a working surface**: update it in place; a moved date keeps its old value beside it. Closing shrinks it to one line.
+- **A card opens when it can be acted on.** What waits for something else is one line on the card for that thing (*"when it arrives: Y"*), opening that *waiting* card first if needed; only what is nobody's to deliver goes in the area's `STATE.md`.
 - **Answered → closed in the same turn**, with the date and their words; a decision also gets its line in `DECISIONS.md`.
 - Work an agent can do later, which needs nothing from the owner, goes under *For Claude, later*. It is never counted as waiting on them.
 
@@ -106,10 +107,14 @@ Offer the review when it is due. Never run one unasked. Without it, this is a fo
 
 ## 8. This folder's words
 
-> The fixed vocabulary, in the owner's language, chosen once at setup. Every session writes these words and searches for these words, so they never drift. Changing one is an owner decision, logged.
+> The fixed vocabulary, in the owner's language, chosen once at setup. Every session writes these words and searches for these words, so they never drift. Changing one is an owner decision, logged. This is the only list of them.
 
-<< At install, one line per term, in the owner's language. In an English folder: "English: the words are as written in this file."
+<< At install, one line per group, in the owner's language. In an English folder: "English: the words are as written in this file."
    - card kinds: decide → … · do → … · approve → … · waiting → …
+   - card status: done → … · cancelled → …
+   - file kinds: evidence → … · decision → … · work → … · proof → …   (a file kind, distinct from the claim label below)
    - trust: current → … · needs-review → … · completed → … · superseded → …
    - claims: evidence → … · inferred → … · unknown → …
-   - assumed → … · not said → … · proposed → … · general → … >>
+   - sensitivity: open → … · private → … · sealed → …
+   - assumed → … · not said → … · proposed → … · general → … · system → …
+   - how to write about the owner: << neutral, until they use a form about themselves; then that form >> >>
