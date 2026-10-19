@@ -7,7 +7,7 @@ description: Turn a single folder into a person's second brain for their work, a
 
 **version 0.3.0 · 2026-10-19** — one folder holds a person's work: what they decided, what is open, and what is waiting on them. This skill is how any agent works with it.
 
-*(When installing or updating, write this version line into the folder's `START-HERE.md` so the owner can tell which one they have.)*
+*(When installing or updating, write `second-brain 0.3.0 · 2026-10-19` into the folder's `START-HERE.md` so the owner can tell which one they have. The marker in the rulebook, `second-brain v0.3`, names only the minor version, and changes only when the rulebook's frame does.)*
 
 ## The one idea
 
@@ -37,8 +37,12 @@ The same split runs through everything: **their content in their language**: dec
 
 Templates split in two:
 
-- **The frame, sections 0 to 6 of the root `CLAUDE.md`, installs verbatim, in English.** Nobody but an agent reads it, agents read English perfectly well, and keeping it byte-identical across installs is what makes the system teachable, upgradeable and checkable.
-- **Everything the person reads (`START-HERE`, `BOARD`, `TASKS`, `DECISIONS`, every area's `README` and `STATE`) is written in their language**, translating the template's headings as you fill it. The template is a shape to follow, not text to transcribe.
+- **The frame, which is the whole root `CLAUDE.md` except what goes under its last two headings, installs verbatim, in English.** Nobody but an agent reads it, agents read English perfectly well, and keeping it byte-identical across installs is what makes the system teachable, upgradeable and checkable.
+- **Everything the person reads (`START-HERE`, `BOARD`, `TASKS`, `DECISIONS`, every area's `README` and `STATE`) is written in their language.** In a language other than English, *copy and fill* means: keep the template's structure, with every heading, field and rule present, translated; add nothing from memory, drop nothing.
+
+**A handful of words are vocabulary, not prose:** the four card kinds (decide · do · approve · waiting), the four trust words, the three claim labels (evidence · inferred · unknown), and `assumed`. At setup, choose one word for each in their language and write them under section 8 of the rulebook, *This folder's words*. Every session reads that section, so every session writes, and searches for, the same words. A session that picks its own translation writes cards that the next session's search cannot find. In an English folder, the section says so in one line.
+
+**In a language that marks gender**, follow the form the person uses about themselves; until they have used one, write neutral forms.
 
 ## If the folder already exists
 
@@ -81,10 +85,10 @@ Install all of this in one go, in a single turn:
 | `root-CLAUDE.md` | `CLAUDE.md`: the rulebook, at the root |
 | `START-HERE.md` | `START-HERE.md`: the one file a human opens |
 | `BOARD.md` | `BOARD.md`: no rows yet |
-| `TASKS.md` | `TASKS.md`: no cards yet |
+| `TASKS.md` | `TASKS.md`: one card, the copy question (*Make it portable*, below) |
 | `DECISIONS.md` | `DECISIONS.md`: holding only the assumptions this setup took |
 
-**Five files at the root, and not one folder. That is the whole install.**
+**Five files at the root, and not one folder. That is the whole install.** The rulebook's sections 7 and 8 are filled in the same turn: *"None yet."* under 7, and the folder's words under 8.
 
 Everything comes from `assets/templates/`: **copy and fill; do not compose from memory.** If every install improvises its own wording there is no shared system to teach, support or upgrade, only a family of lookalikes that drift apart.
 
@@ -98,7 +102,7 @@ A default area is the setup question again, written to disk instead of asked alo
 
 **Where the first things go before any area exists:** decisions to `DECISIONS.md`, tasks to `TASKS.md`, and material to `inbox/`, which is created with its first item. Nothing is lost there, and nothing pretends to be filed.
 
-**How the first area is born.** The moment material plainly belongs to one area of their work (not a kind of file, an *area*), say what you noticed and let them name it: *"Everything you've put in so far is about the same client. Do you want it as its own area? What do you call it?"* **Their word, not yours.** That is the one question worth spending here, and it is the same question that creates every area after it.
+**How the first area is born.** The moment material plainly belongs to one area of their work (not a kind of file, an *area*), or the same client or project keeps coming up in what they say, say what you noticed and let them name it: *"Everything you've put in so far is about the same client. Do you want it as its own area? What do you call it?"* **Their word, not yours.** That is the one question worth spending here, and it is the same question that creates every area after it.
 
 **Watch for the right thing.** A cluster of files is not an area of work. If it were, everyone would end up with an area called "invoices". This list is not a taxonomy, it is never read out as a menu, and it never becomes folders. It exists so you can *recognise* an area when one turns up:
 
@@ -106,7 +110,7 @@ A default area is the setup question again, written to disk instead of asked alo
 
 When they say no, record it and do not raise it again.
 
-**And say what the board says on day one: nothing.** Zero rows and zero cards, with a line stating that plainly and saying what makes the first one appear. An empty board is not a broken board.
+**And say what the board says on day one: nothing.** Zero rows, with a line stating that plainly and saying what makes the first one appear, and one card, the copy question. An empty board is not a broken board.
 
 ### Asking costs something
 
@@ -116,16 +120,24 @@ Ask only when the answer would change what you do **and** the material cannot se
 
 ### Then get out of the way
 
-Say in a few lines what now exists and that they can start talking to it. **Say plainly that there are no areas and no cards yet, and that this is correct.** Do not present a plan, a next step or a checklist. The whole promise is that this needs no setup.
+**The hand-over is a few lines, in their language, and it says exactly this:**
 
-Detect storage **once**: is there a `.git`? Record `storage:` in `START-HERE.md` and never ask again. git is optional and always will be; requiring it would exclude most of the people who need this.
+1. what now exists: five files, no folders, and which one they open (`START-HERE.md`);
+2. **that there are no areas yet, and that this is correct**: the first one appears when they bring something that belongs to one;
+3. that there is one card waiting, the copy question, and what happens if they ignore it;
+4. which assumptions you logged, in one line;
+5. **that without the weekly review this is a folder of dead files within six weeks.** Capturing is easy and reviewing is not, and that asymmetry, not the structure, is what kills these systems.
+
+Then stop. Do not present a plan, a next step or a checklist beyond that. The whole promise is that this needs no setup.
+
+Detect storage **once**: is there a `.git`? Write what you saw in `START-HERE.md` (*git: yes* or *git: no*, with the date) and never ask again. That is an observation, not an assumption, so it does not also go in the log. Do not guess at cloud sync: it cannot be seen from inside the folder. git is optional and always will be; requiring it would exclude most of the people who need this.
 
 ### Everything you decided or noticed lands in a file, in the same turn
 
 Building without questions means taking assumptions on the owner's behalf. That is fine, and it is exactly why each one has to leave a trace on disk:
 
-- **Every assumption you took** (storage, language, anything else) gets a line in `DECISIONS.md`, marked `assumed`.
-- **Everything you flagged but refused to act on** (a folder name that breaks the naming rule is the usual one) becomes a *decide* card in `TASKS.md`, with your recommendation and the default.
+- **Every assumption you took** (the language, if nobody confirmed it, the folder's words, anything else) gets a line in `DECISIONS.md`, marked `assumed`, with the basis: what you saw, and what you assumed from it.
+- **Everything you flagged but refused to act on** (a folder name that breaks the naming rule is the usual one) becomes a *decide* card in `TASKS.md`, with your recommendation and the default, and the hand-over names it alongside the copy question.
 
 **Say it in chat as well, but never only in chat.** The conversation is gone by tomorrow; the folder is the memory.
 
@@ -137,9 +149,14 @@ Building without questions means taking assumptions on the owner's behalf. That 
 
 **One constraint, for every folder and file name: ASCII English, no spaces.** Use hyphens: `second-brain`, `acme-renewal`, `START-HERE.md`. These names get typed into shells, passed to tools and synced between machines, and spaces or non-ASCII characters break that in ways that are miserable to debug. If they propose a name with spaces, explain why and offer the hyphenated form. Their **content** goes in whatever language they think in.
 
-### Make it portable
+### Make it portable: the first card
 
-Offer to copy this skill into `<their folder>/.claude/skills/second-brain/`. Then the folder carries its own rules, including `references/ROUTING.md`, and survives a dead laptop, a new machine and a different tool.
+Whether the folder keeps its own copy of this skill, in `<their folder>/.claude/skills/second-brain/`, is the owner's call, so it is not asked out loud and not left in chat: **it is the first card in `TASKS.md`**, a *decide* card, written at setup. It is also the first card they ever see, which makes it the example of what every card after it looks like.
+
+- **A · keep a copy in the folder.** The folder carries its own rules, including `references/ROUTING.md`, and survives a dead laptop, a new machine and a different tool. The copy does not update itself; updating means pasting the install line again inside the folder.
+- **B · no copy.** The folder relies on the skill installed on this computer, and updates whenever that does. On a new computer, the install line has to be pasted once.
+- **Recommendation:** A if the folder syncs to a cloud drive or moves between machines; otherwise B.
+- **If they do nothing:** B. Nothing is copied.
 
 ---
 
@@ -153,7 +170,7 @@ Offer to copy this skill into `<their folder>/.claude/skills/second-brain/`. The
 | `inbox/` | the first thing that has no area yet |
 | `archive/` | the first time anything is retired |
 | the *Done and cancelled* section of `TASKS.md` | the first card closed |
-| the first line in section 7 of `CLAUDE.md` | the first rule the owner sets for every session |
+| the first line in section 7 of `CLAUDE.md` | the first rule for all their work, or for an area not yet born |
 
 **None of these gets installed early "so it is ready."** A file that answers a question nobody has asked yet reads as an answer, and a reader cannot tell a placeholder from a decision.
 
@@ -168,6 +185,8 @@ That is the whole mandatory set, and it is deliberately small. **A reading list 
 Open your first reply with one line, so the owner can tell at a glance that you read:
 
 `area: <name> · read: BOARD, TASKS, <area>/STATE`
+
+With no area in play: `area: — · read: BOARD, TASKS`. The session that ran BOOTSTRAP skips the line; it wrote the files it would have read.
 
 **Then, before answering anything: is it already here?** Look for it in `TASKS.md` and `DECISIONS.md` first, and if it is there, say so before anything else: *"Already on your list since 14/10: Send Dana the Q1 numbers. Do it now?"* · *"You decided this on 02/10: «we only quote in shekels». Does it still hold?"* That one look is what stops the same task being written three times and the same question being decided twice, differently.
 
@@ -185,9 +204,9 @@ Open your first reply with one line, so the owner can tell at a glance that you 
 
 In the same turn:
 
-1. **A line in `DECISIONS.md`**: the date · the area · what was decided · **the sentence that decided it, quoted** · who decided (the person, their manager, a client, named) · why, **as it was given, or "not said"** · what it replaces. Never supply a reason nobody gave; an invented *why* is the most convincing false line a log can hold.
-2. **If it binds future work, it also lands where it is applied**: the area's `README.md` under *Rules here*, or section 7 of the root `CLAUDE.md` if it binds every session in the folder. Both point back to the log line. **Nothing lives only in the log.** A rule that exists only in a history file is a rule no session will ever apply. **And the rulebook takes a rule only if a session that did not know it would do damage**; everything else is fine where it is.
-3. **One line in chat**: `Logged in DECISIONS: «from now on we close at 21:00».` They can correct it while it is fresh.
+1. **A line in `DECISIONS.md`, at the end of the file**: the date · the area (*general* while no area fits) · what was decided · **the sentence that decided it, quoted, and whose sentence it is** · who decided (the person, their manager, a client, named) · why, **as it was given, or "not said"** · what it replaces, or "not said". When the decision is relayed (*"my manager decided…"*), quote the person's own sentence, say it was relayed, and name who decided; never put words in the decider's mouth. Never supply a reason nobody gave; an invented *why* is the most convincing false line a log can hold.
+2. **If it binds future work, it also lands where it is applied.** A rule that belongs to one area goes in that area's `README.md` under *Rules here*. A rule for all their work, or one whose area does not exist yet, goes in section 7 of the root `CLAUDE.md`, *standing rules*, whoever set it; when its area is born, it moves into that area's README in the same action. Either way it points back to its log entry by date and title: `(DECISIONS, 2026-10-19: quotes in shekels only)`. **Nothing lives only in the log.** A rule that exists only in a history file is a rule no session will ever apply. **And the rulebook takes a rule only if a session that did not know it would do damage**; everything else is fine where it is.
+3. **One line in chat, in their language**, even when the decision is also a rule: `Logged in DECISIONS, and added to the standing rules: «from now on we close at 21:00».` They can correct it while it is fresh. Talking to them, section 7 is *"the standing rules at the end of CLAUDE.md"*, never a section number.
 
 **Thinking aloud is not a decision, and neither is a preference voiced once.** When you genuinely cannot tell, ask one line, *"Is that decided, or still open?"*, and if it is open it becomes a *decide* card. That question is worth its cost: a guess in either direction leaves a false line in the one file that is supposed to be permanent.
 
@@ -211,6 +230,12 @@ Four kinds, and the kind decides what the card must carry:
 | **waiting** | who owes it, what exactly, since when, and the day to nudge |
 
 And every card, whatever its kind, says **what happens if they do not act**: the default and when it takes effect, or "this blocks …". An open item with no recommendation and no default hands responsibility back instead of asking for a decision, and it is the reason lists like this stop being read.
+
+**The due date, the urgency, what done looks like and the day to nudge are the owner's terms, not yours.** Write what they said. Where they said nothing: leave urgency out, write "not said" for done, and for a nudge day propose one, marked *proposed*, and say so in the chat line. A date you worked out keeps the word it came from: `2026-10-22 (Thursday)`. Cards are ordered by due date, earliest first, and cards with no date go last, unless the owner has put them in an order of their own.
+
+**Cards and log entries carry no evidence / inferred / unknown labels; their fields do that job.** A quote is the evidence, *proposed* marks what you inferred, and *not said* marks what is unknown. The labels are for claims inside filed material.
+
+**CAPTURE does not touch `BOARD.md`**, unless what was said changes where an area stands.
 
 Three more rules, each from a real failure:
 
@@ -259,7 +284,7 @@ Skipping the index or the state update is the real failure mode. The file exists
 
 ## REVIEW — the part that cannot be skipped
 
-Offer it when it is due. Never run one unasked.
+Offer it when it is due. Never run one unasked. **The weekly review is due seven days after the last one**, and `BOARD.md` carries the date of the last one (at setup, the setup date). Each review writes its own date there when it finishes.
 
 - **Weekly**: `TASKS.md`, end to end. What closed and what did not. **A card that has not moved for two weeks gets flagged**: twice is a signal, not laziness. Either it is not really theirs, it is too big to be one card, or nobody knows what done looks like. **Every *waiting* card past its nudge date gets named, with the days**: *"Dana, the Q1 numbers: 9 days."* Cards past their due date. `inbox/` emptied; early on, this is where areas get born. And every `assumed` line in `DECISIONS.md` confirmed or reversed.
 - **Monthly**: scan `BOARD.md` for areas nobody touched, and report it **as data, flatly**: *"supplier X: 41 days."* Not "you have been neglecting supplier X". The person already knows how they feel about it; what they lack is the number. Offer the sweep alongside it.
@@ -298,8 +323,6 @@ Fix the mechanical parts and report them; leave anything that changes meaning to
 ### Before you say a long piece of work is done
 
 **Re-read the original request, from the file or the message and not from your memory of it, and list everything it asked for.** Check each item against the folder. Do what is missing, then report. Long sessions lose things quietly, and the agent that did the work is the worst-placed to notice, because it remembers what it meant to do. (The owner, on adopting this: *"it finds and fixes mistakes and things that get missed in long runs."*)
-
-Say this out loud at bootstrap: **without the weekly review, everything above is a folder of dead files within six weeks.** Capturing is easy and reviewing is not, and that asymmetry, not the structure, is what kills these systems.
 
 ---
 

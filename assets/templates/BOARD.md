@@ -1,6 +1,6 @@
 # << "The board", in the owner's language >>
 
-> One screen. Every area of my work. **Updated: << YYYY-MM-DD >>**
+> One screen. Every area of my work. **Updated: << YYYY-MM-DD >>** · **Last weekly review: << YYYY-MM-DD; at setup, the setup date >>**
 > State: 🟢 fine · 🟡 needs attention · 🔴 nobody has looked · ⚪ quiet by choice
 >
 > **This file is status. It is never history.** What was decided lives in [`DECISIONS.md`](DECISIONS.md) · what is waiting on me lives in [`TASKS.md`](TASKS.md) · the detail of an area lives in its `STATE.md`. **A paragraph here that opens with a date belongs in the log, not on the board.**
@@ -16,9 +16,9 @@
 
 ## What the board is saying right now
 
-<< One short paragraph, once there is anything to say. Name the longest-untouched area with its number of days, and the most
-   urgent card in TASKS.md by its title. State it flatly: the owner already knows how they feel about it; what they lack is
-   the number. Never copy counts of cards here; they live in TASKS.md, and a count kept in two places is wrong in one. >>
+<< One short paragraph, written at the monthly review and whenever an area's state changes. Name the longest-untouched
+   area with its number of days. State it flatly: the owner already knows how they feel about it; what they lack is the
+   number. Never copy cards or their counts here; they live in TASKS.md, and anything kept in two places is wrong in one. >>
 
 ## Rules
 

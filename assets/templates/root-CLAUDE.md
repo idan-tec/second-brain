@@ -3,7 +3,7 @@
 > **second-brain v0.3.** This file holds only what does not change between sessions.
 > It carries the name `CLAUDE.md` so Claude Code loads it automatically for every session at or below this folder; the rules do not depend on anyone remembering to read them. The version marker above is also how the second-brain skill recognises this folder: by this line, never by the folder's name.
 > What changes lives elsewhere: what is waiting in `TASKS.md`, what was decided in `DECISIONS.md`, where things stand in `BOARD.md` and in each area's `STATE.md`. **Never put state here.**
-> Sections 0–6 are the frame and install verbatim. Section 7 belongs to the owner. Ceiling: about 130 lines, because every session reads every line.
+> Everything in this file installs verbatim, in English, except what goes under the headings of sections 7 and 8: that is this folder's own. Ceiling: about 130 lines, because every session reads every line.
 
 ## 0. Opening a session
 
@@ -14,7 +14,7 @@ Before any action, in this order:
 3. `TASKS.md`: what is waiting on the owner.
 4. The `README.md` and `STATE.md` of the area you are about to touch. **Nothing else loads automatically**; use the area's `INDEX.md` to find things.
 
-Open your first reply with **`area: <name> · read: BOARD, TASKS, <area>/STATE`**. If that line is missing, the owner knows you did not read.
+Open your first reply with **`area: <name> · read: BOARD, TASKS, <area>/STATE`** (no area in play: `area: — · read: BOARD, TASKS`). If that line is missing, the owner knows you did not read.
 
 **Before answering any request, look for it in `TASKS.md` and `DECISIONS.md`.** Already there? Say so first: *"already on your list since <date>: <title>"* · *"you decided this on <date>: «…». Does it still hold?"*
 
@@ -22,17 +22,17 @@ Open your first reply with **`area: <name> · read: BOARD, TASKS, <area>/STATE`*
 
 ## 1. What gets written, and where: in the same turn it is said
 
-| The owner says, or you notice | It goes to | You say, in one line |
+| The owner says, or you notice | It goes to | You say, in one line, in their language |
 |---|---|---|
-| a decision: theirs, or one made for them | a line in `DECISIONS.md`, with the sentence quoted | `Logged in DECISIONS: «…»` |
+| a decision: theirs, or one made for them | a line at the end of `DECISIONS.md`, with the sentence quoted | `Logged in DECISIONS: «…»` |
 | something to do, decide, approve, or wait for from someone | a card in `TASKS.md` | `Added a card: <title>` |
-| a rule that should bind from now on | where it is applied (the area's `README.md`, or section 7 below), plus its line in `DECISIONS.md` | `Rule added in <where>` |
+| a rule that should bind from now on | where it is applied (the area's `README.md`, or section 7 below), plus its line in `DECISIONS.md` | `…and added to the standing rules` |
 | material: a note, a document, a link, a folder | its area, by the four questions in §3 | `Filed: <path>` |
 
 - **Nothing that needs the owner lives only in chat or in a report.** The conversation is gone tomorrow, and a request that is not on a card is lost the moment the next one arrives.
 - **Thinking aloud is not a decision.** Cannot tell? Ask one line: *"decided, or still open?"* Open means a *decide* card.
-- **Their words, not yours.** Quote the sentence that decided it, and name who decided. **Never invent a why**: if none was given, write "not said".
-- **Nothing lives only in the log.** A decision that binds future work also lands where it is applied, pointing back to its log line.
+- **Their words, not yours.** Quote the sentence and say whose it is; a relayed decision says it was relayed and names who decided. **Never invent a why**: if none was given, write "not said".
+- **Nothing lives only in the log.** A decision that binds future work also lands where it is applied, pointing back to its log entry by date and title. A rule for one area goes in that area's `README.md`; a rule for all work, or for an area not yet born, goes in section 7, and moves to the area's README the day the area is born.
 
 ## 2. Laws that never break
 
@@ -46,7 +46,7 @@ Open your first reply with **`area: <name> · read: BOARD, TASKS, <area>/STATE`*
 - **No secrets in this folder. Ever.** No passwords, API keys, tokens, account numbers or `.env` files, not even "just for now". Names, where a thing is managed, who has access, when it was last rotated: all fine. The value belongs in a password manager.
 - **Assume that if it can, it will.** A rule written here is not a permission layer. Anything irreversible or outward-facing (sending, publishing, paying, deleting) is described on a card and done by the owner. **Keep the keys outside.**
 - **A fact without a date is a lie waiting to happen.** Every number, status, count or claim about the world carries the date it was true, in the line itself.
-- **Evidence and inference are never written the same way.** Every claim carries `evidence:` (observed, quoted or sourced, **with where it came from**) · `inferred:` (derived, reasoned, assumed) · `unknown:` (a gap left open). An unlabelled claim is a defect. Use the owner's language for the three words.
+- **Evidence and inference are never written the same way.** Every claim in filed material carries `evidence:` (observed, quoted or sourced, **with where it came from**) · `inferred:` (derived, reasoned, assumed) · `unknown:` (a gap left open), in the words of section 8. An unlabelled claim is a defect. Cards and log entries use their fields instead: a quote is evidence, *proposed* is inferred, *not said* is unknown.
 - **Check the source, never the summary.** A report saying "done" is not evidence. **"Nothing found" means nothing until the same search has found something you knew was there.**
 - **Owner unavailable?** Take the documented default, proceed, log it `assumed`. Never block silently.
 - **Every `never` needs its `instead`.** The instead is usually: open a card, and park the item until they answer.
@@ -68,6 +68,7 @@ Short form, in order (the full procedure is the skill's `references/ROUTING.md`)
 
 - Title: a verb and a thing, in plain words. Kind: **decide** (options + recommendation) · **do** (what done looks like, and the steps when they are known) · **approve** (each check, where to look, an answer per check) · **waiting** (who, what, since when, when to nudge).
 - Every card says what is happening, in two or three lines, and **what happens if the owner does not act**: the default and when it takes effect, or "blocks …".
+- **Due date, urgency, what done looks like and the nudge day are the owner's terms.** Write what they said; otherwise leave urgency out, write "not said", and mark any date you suggest as *proposed*. A date you worked out keeps its word: `2026-10-22 (Thursday)`. Order: by due date, undated last.
 - **A card opens when it can be acted on.** Not yet actionable → a line in the area's `STATE.md`: *"after X: Y"*.
 - **Answered → closed in the same turn**, with the date and their words; a decision also gets its line in `DECISIONS.md`.
 - Work an agent can do later, which needs nothing from the owner, goes under *For Claude, later*. It is never counted as waiting on them.
@@ -91,14 +92,24 @@ Who wins, highest first:
 
 Every area's `README.md` declares `sensitivity: open | private | sealed`. `private`: never quoted into summaries or anything leaving this folder. `sealed`: not read at all unless the owner names the area in the current session. **This is a convention, not encryption**; say so if the owner assumes otherwise.
 
-- **Weekly**: `TASKS.md` end to end. Anything that has not moved for two weeks gets flagged · every *waiting* card past its nudge date named, with the days · `inbox/` emptied · every `assumed` line confirmed or reversed.
+- **Weekly**, due seven days after the last one (its date is on the board): `TASKS.md` end to end. Anything that has not moved for two weeks gets flagged · every *waiting* card past its nudge date named, with the days · `inbox/` emptied · every `assumed` line confirmed or reversed.
 - **Monthly**: `BOARD.md` scanned for untouched areas, reported as data, never as judgement.
 
 Offer the review when it is due. Never run one unasked. Without it, this is a folder of dead files within six weeks.
 
-## 7. The owner's standing rules
+## 7. Standing rules
 
-> Rules the owner set that bind every session in this folder. Each one: the rule in their words, its date, and the `DECISIONS.md` line it came from. **A rule enters here only if a session that did not know it would do damage**; anything else stays in the log and in the area where it applies.
+> Rules that bind every session in this folder, whoever set them (the owner, or someone they answer to, as the owner reported it). Each one: the rule in the words it was given, and its `DECISIONS.md` entry by date and title. **A rule enters here only if a session that did not know it would do damage**; anything else stays in the log and in the area where it applies.
 
 << At install, write "None yet." in the owner's language. That line comes out in the same edit that adds the first rule:
-   `- «We don't send quotes on Fridays.» (2026-10-19, DECISIONS)` >>
+   `- «We don't send quotes on Fridays.» (DECISIONS, 2026-10-19: no quotes on Fridays)` >>
+
+## 8. This folder's words
+
+> The fixed vocabulary, in the owner's language, chosen once at setup. Every session writes these words and searches for these words, so they never drift. Changing one is an owner decision, logged.
+
+<< At install, one line per term, in the owner's language. In an English folder: "English: the words are as written in this file."
+   - card kinds: decide → … · do → … · approve → … · waiting → …
+   - trust: current → … · needs-review → … · completed → … · superseded → …
+   - claims: evidence → … · inferred → … · unknown → …
+   - assumed → … · not said → … · proposed → … · general → … >>

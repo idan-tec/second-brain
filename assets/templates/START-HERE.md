@@ -1,7 +1,7 @@
 # << the owner's name for this: "my work brain", or whatever they call it >>
 
 > The one file a human opens. Everything else is reached from here.
-> **system:** second-brain << version: copy the version line from the skill's header >> · **storage:** << OneDrive only | OneDrive + git | local only >>
+> **system:** second-brain << 0.3.0 · 2026-10-19: the version in the skill's header >> · **git:** << yes | no >>, checked << YYYY-MM-DD >>
 
 ## What this is
 

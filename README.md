@@ -17,7 +17,7 @@ Install the skill from https://github.com/idan-tec/second-brain into ~/.claude/s
 then set up a second brain for my work here.
 ```
 
-That's the whole setup. The agent downloads the skill, installs it, and builds the folder in one turn, **asking at most one question: which language you think in.** Then you start talking to it.
+That's the whole setup. The agent downloads the skill, installs it, and builds the folder in one turn, **asking at most one question: which language you think in.** You'll find one card waiting: whether the folder should keep its own copy of the rules. Ignore it and nothing is copied. Then you start talking to it.
 
 Ran it inside a folder that already has files? **It won't touch them.** It builds into a fresh `second-brain/` sub-folder instead, and your existing files stay exactly where they are. You can feed them in later, deliberately, one at a time.
 
